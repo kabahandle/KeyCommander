@@ -1,0 +1,403 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0FBC4284-737D-4A66-ABC7-96797827332F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>KeyCommander</RootNamespace>
+    <AssemblyName>KeyCommander</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'KeyCommander|AnyCPU'">
+    <OutputPath>bin\KeyCommander\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'KeyCommander|x86'">
+    <OutputPath>bin\x86\KeyCommander\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>KEYS03.ICO</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>6342F5ECAD85976294ABF72D6739F006208F9C7A</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release2|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Release2\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release2|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Release2\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DAO\AccessConstring.cs" />
+    <Compile Include="DAO\LisenceRestDays.cs" />
+    <Compile Include="DAO\MyDAOBase.cs" />
+    <Compile Include="DAO\settingsDAO.cs" />
+    <Compile Include="DAO\settingsSingleton.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmConfirm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConfirm.Designer.cs">
+      <DependentUpon>frmConfirm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmKeyCommander.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmKeyCommander.Designer.cs">
+      <DependentUpon>frmKeyCommander.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLisence.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLisence.Designer.cs">
+      <DependentUpon>frmLisence.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserClasses\AssocToolStripMenuItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserClasses\CommandMenu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserClasses\Crypt.cs" />
+    <Compile Include="UserClasses\DataFileDirectory.cs" />
+    <Compile Include="UserClasses\DataFilePath.cs" />
+    <Compile Include="UserClasses\EMenu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserClasses\EnvValuesHelper.cs" />
+    <Compile Include="UserClasses\FileHelper.cs" />
+    <Compile Include="UserClasses\FMenu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserClasses\FormSizeSaveAdapter.cs" />
+    <Compile Include="UserClasses\IMyCombo4Complete.cs" />
+    <Compile Include="UserClasses\LFN_SFN.cs" />
+    <Compile Include="UserClasses\ListAssoc.cs" />
+    <Compile Include="UserClasses\ListMacro.cs" />
+    <Compile Include="UserClasses\ListShortcut.cs" />
+    <Compile Include="UserClasses\MacroToolStripMenuItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserClasses\MacroVarReplacer.cs" />
+    <Compile Include="UserClasses\MouseRightClickMenu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserClasses\MyBaseCompleteCombo.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserClasses\MyColumnHeader.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserClasses\MyCommandLineCombo.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserClasses\MyDirCombo.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserClasses\MyDirListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserClasses\MyItem4AssocListView.cs" />
+    <Compile Include="UserClasses\MyItem4FileListView.cs" />
+    <Compile Include="UserClasses\MyItem4MacroListView.cs" />
+    <Compile Include="UserClasses\MyItem4ShortcutListview.cs" />
+    <Compile Include="UserClasses\MyListBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserClasses\MyMacroListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserClasses\MyTabPage.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserClasses\SlidingButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserClasses\SortBindingList.cs" />
+    <Compile Include="UserClasses\VersionSingleton.cs" />
+    <Compile Include="UserClasses\win32api.cs" />
+    <Compile Include="UserClasses\MyItem4DosemuAliasListview.cs" />
+    <Compile Include="UserClasses\ListDosemuAlias.cs" />
+    <Compile Include="UserForms\frmEditAssoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserForms\frmEditAssoc.Designer.cs">
+      <DependentUpon>frmEditAssoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserForms\frmEditMacro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserForms\frmEditMacro.Designer.cs">
+      <DependentUpon>frmEditMacro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserForms\frmListAssoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserForms\frmListAssoc.Designer.cs">
+      <DependentUpon>frmListAssoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserForms\frmListMacro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserForms\frmListMacro.Designer.cs">
+      <DependentUpon>frmListMacro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserForms\frmListShortcut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserForms\frmListShortcut.Designer.cs">
+      <DependentUpon>frmListShortcut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserForms\frmEditShortcut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserForms\frmEditShortcut.Designer.cs">
+      <DependentUpon>frmEditShortcut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserForms\frmListDosemuDirAlias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserForms\frmListDosemuDirAlias.Designer.cs">
+      <DependentUpon>frmListDosemuDirAlias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserForms\frmEditDosemuAlias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserForms\frmEditDosemuAlias.Designer.cs">
+      <DependentUpon>frmEditDosemuAlias.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="frmConfirm.resx">
+      <DependentUpon>frmConfirm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmKeyCommander.resx">
+      <DependentUpon>frmKeyCommander.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLisence.resx">
+      <DependentUpon>frmLisence.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="UserForms\frmEditAssoc.resx">
+      <DependentUpon>frmEditAssoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserForms\frmEditMacro.resx">
+      <DependentUpon>frmEditMacro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserForms\frmListAssoc.resx">
+      <DependentUpon>frmListAssoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserForms\frmListMacro.resx">
+      <DependentUpon>frmListMacro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserForms\frmListShortcut.resx">
+      <DependentUpon>frmListShortcut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserForms\frmEditShortcut.resx">
+      <DependentUpon>frmEditShortcut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserForms\frmListDosemuDirAlias.resx">
+      <DependentUpon>frmListDosemuDirAlias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserForms\frmEditDosemuAlias.resx">
+      <DependentUpon>frmEditDosemuAlias.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App_Data\Cygwin\bash.cmd">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="App_Data\Cygwin\CygCmd.cmd">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="App_Data\Cygwin\CygEmacs.cmd">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="App_Data\Cygwin\CygMintty.cmd">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="App_Data\Cygwin\mintty.cmd">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="App_Data\dobat.cmd">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="App_Data\dobatp.bat">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="App_Data\dobatp.cmd">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="App_Data\dobatt.cmd">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="App_Data\dobattp.bat">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="App_Data\dobattp.cmd">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="App_Data\dosbox\exec.BAT">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="App_Data\dosbox\exec.cmd">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\assoc.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="App_Data\cmdlines.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="App_Data\data.mdb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="App_Data\dirs.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="App_Data\formsize.txt" />
+    <Content Include="App_Data\macro.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="App_Data\r1.mdb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="App_Data\shortcuts.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="App_Data\tabfiles.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="App_Data\tee.exe">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="App_Data\window1.txt" />
+    <Content Include="App_Data\window2.txt" />
+    <Content Include="KEYS03.ICO" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>if  $(ConfigurationName)  == Release "C:\Program Files (x86)\Microsoft Visual Studio 11.0\PreEmptive Solutions\Dotfuscator and Analytics Community Edition\dotfuscator.exe" -q "$(ProjectDir)Dotfuscator1.xml"
+if $(ConfigurationName)  == Release copy /Y "$(ProjectDir)Dotfuscated\$(TargetFileName)" "$(ProjectDir)$(OutDir)"</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
