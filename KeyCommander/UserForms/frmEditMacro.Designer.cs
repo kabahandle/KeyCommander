@@ -208,6 +208,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.chkShowInRightClickMenu);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmEditMacro";
             this.Text = "マクロ編集";
             this.Load += new System.EventHandler(this.frmEditMacro_Load);

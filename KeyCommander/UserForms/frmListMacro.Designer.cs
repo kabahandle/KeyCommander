@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmListMacro));
             this.pnlTop = new System.Windows.Forms.Panel();
             this.btnCopy = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
@@ -133,6 +134,7 @@
             this.ClientSize = new System.Drawing.Size(619, 305);
             this.Controls.Add(this.pnlCenter);
             this.Controls.Add(this.pnlTop);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmListMacro";
             this.Text = "マクロ一覧";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmListMacro_FormClosing);

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmListAssoc));
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnCopy = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
@@ -162,6 +163,7 @@
             this.ClientSize = new System.Drawing.Size(639, 300);
             this.Controls.Add(this.listAssoc);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmListAssoc";
             this.Text = "関連付け一覧";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmListAssoc_FormClosing);

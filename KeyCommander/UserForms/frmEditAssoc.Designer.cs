@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEditAssoc));
             this.chkStdOut = new System.Windows.Forms.CheckBox();
             this.chkPause = new System.Windows.Forms.CheckBox();
             this.btnCancel = new System.Windows.Forms.Button();
@@ -241,6 +242,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.chkShowInRightClickMenu);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmEditAssoc";
             this.Text = "関連付け編集";
             this.Load += new System.EventHandler(this.frmEditAssoc_Load);

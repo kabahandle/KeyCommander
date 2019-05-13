@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmListShortcut));
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnCopy = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
@@ -145,6 +146,7 @@
             this.ClientSize = new System.Drawing.Size(733, 327);
             this.Controls.Add(this.listAliases);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmListShortcut";
             this.Text = "ショートカット一覧";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmListShortcut_FormClosing);
