@@ -158,10 +158,10 @@
             this.tbxHelp.Name = "tbxHelp";
             this.tbxHelp.ReadOnly = true;
             this.tbxHelp.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.tbxHelp.Size = new System.Drawing.Size(594, 26);
+            this.tbxHelp.Size = new System.Drawing.Size(594, 108);
             this.tbxHelp.TabIndex = 27;
             this.tbxHelp.TabStop = false;
-            this.tbxHelp.Text = "$C ： カレントファイル（拡張子を含む）と置換します。";
+            this.tbxHelp.Text = resources.GetString("tbxHelp.Text");
             // 
             // label2
             // 
@@ -223,7 +223,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnCancel;
-            this.ClientSize = new System.Drawing.Size(618, 211);
+            this.ClientSize = new System.Drawing.Size(618, 288);
             this.Controls.Add(this.chkDOS);
             this.Controls.Add(this.tbxNum);
             this.Controls.Add(this.label6);

@@ -947,6 +947,7 @@ namespace KCommander
                         @"[W]: 1ウィンドウ／2ウィンドウ切り替え　[ALT+CTRL]: KY中佐を最前面に表示　[H]: ヘルプ切り替え表示　[B]:ヘルプ表示／非表示",
                         @"[SHIFT+<アルファベット>]:  アルファベットを先頭に持つファイル名検索",
                         @"【コマンドライン時】[Ctrl+Space]: コマンドライン補完（ヒストリから）　[TAB]: コマンドライン補完（Dirから）",
+                        @"　　　　　　　　　　[Ctrl+R]: 補完候補を範囲選択（右端側で実行のこと）",
                         @"【Dir時】[Ctrl+Space]: Dir補完（ヒストリから）　[TAB]: Dir補完（Dirから）",
                              };
                 textBoxHelp.Lines = lines;

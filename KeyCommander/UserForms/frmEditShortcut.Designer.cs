@@ -112,7 +112,7 @@
             this.tbxHelp.Size = new System.Drawing.Size(594, 87);
             this.tbxHelp.TabIndex = 27;
             this.tbxHelp.TabStop = false;
-            this.tbxHelp.Text = "$C ： カレントファイル（拡張子を含む）と置換します。";
+            this.tbxHelp.Text = resources.GetString("tbxHelp.Text");
             // 
             // btnFile
             // 
