@@ -9,6 +9,7 @@ using System.Diagnostics;
 using Microsoft.VisualBasic;
 using System.Text.RegularExpressions;
 using System.Collections;
+using KeyCommander.UserClasses;
 
 namespace KCommander.UserClasses
 {
@@ -1267,6 +1268,12 @@ namespace KCommander.UserClasses
         public void SetTargetDir(string targetDir)
         {
             this.TargetDir = targetDir;
+        }
+
+        protected override void OnGotFocus(EventArgs e)
+        {
+            base.OnGotFocus(e);
+            LastFocusedListView.lastFocusedListView = this;
         }
 
         public void Save(int no)

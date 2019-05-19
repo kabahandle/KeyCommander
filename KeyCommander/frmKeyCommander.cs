@@ -12,6 +12,7 @@ using System.IO;
 using DAOs;
 using KCommander.UserClass;
 using System.Diagnostics;
+using KeyCommander.UserClasses;
 //using KHRegistory;
 
 namespace KCommander
@@ -638,13 +639,15 @@ namespace KCommander
 
         private string OnPassThrCurDirRequested()
         {
-            MyDirListView list = MyDirListView.Focused;
+            //MyDirListView list = MyDirListView.Focused;
+            MyDirListView list = LastFocusedListView.lastFocusedListView;
             if (list != null)
             {
                 return list.CurDir;
             }
             return string.Empty;
         }
+
 
         private void CmbCmdLineCtrlTPress()
         {

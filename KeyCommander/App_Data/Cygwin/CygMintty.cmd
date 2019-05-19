@@ -9,7 +9,7 @@ shift
 set pg=%1
 shift
 (
-	C:\cygwin64\bin\mintty.exe -e C:\cygwin64\bin\bash.exe --login -i -c "%pg% %1 %2 %3 %4 %5 %6 %7 %8 %9" 2>1 | %APP% %APPPATH%
+	%cygwinbinpath%\mintty.exe -e %cygwinbinpath%\bash.exe --login -i -c "%pg% %1 %2 %3 %4 %5 %6 %7 %8 %9" 2>1 | %APP% %APPPATH%
 )
 
 pause

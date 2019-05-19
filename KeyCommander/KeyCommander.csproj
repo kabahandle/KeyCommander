@@ -165,6 +165,7 @@
     </Compile>
     <Compile Include="UserClasses\FormSizeSaveAdapter.cs" />
     <Compile Include="UserClasses\IMyCombo4Complete.cs" />
+    <Compile Include="UserClasses\LastFocusedListView.cs" />
     <Compile Include="UserClasses\LFN_SFN.cs" />
     <Compile Include="UserClasses\ListAssoc.cs" />
     <Compile Include="UserClasses\ListMacro.cs" />
