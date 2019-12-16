@@ -932,7 +932,7 @@ namespace KCommander.UserClasses
                 else
                 {
 #if DEBUG
-                    startInfo.Arguments = string.Format("/c dobatp.bat \"{0}\" {1} {2}", this.CurDir, macro, param);
+                    startInfo.Arguments = string.Format("/c " + Application.StartupPath + "dobatp.bat \"{0}\" {1} {2}", this.CurDir, macro, param);
                     //MessageBox.Show(string.Format(System.Environment.GetEnvironmentVariable("ComSpec") + " /c " + cmdFilePath + "dobatp.bat \"{0}\" {1} {2}", this.CurDir, macro, param));
 #else
                     //startInfo.Arguments = string.Format(" /c \"" + cmdFilePath + "dobatp.bat\" \"{0}\" {1} {2}", this.CurDir, macro, param);
