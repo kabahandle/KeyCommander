@@ -1,0 +1,9 @@
+MP	bat	1	バッチファイル(&B)	$C
+M	bat	0	さくらエディタ(&S)	"C:\Program Files (x86)\sakura\sakura.exe" $C
+M	exe	0	実行(&E)	$C
+MP	exe	1	実行後、一時停止(&S)	$C
+MP	pl	0	実行(&E)	$C
+M	pl	1	さくらエディタ(&S)	"C:\Program Files (x86)\sakura\sakura.exe" $C
+M	vbs	1	さくらエディタ(&S)	"C:\Program Files (x86)\sakura\sakura.exe" $C
+M	vbs	0	実行(&E)	$C
+M	vbs	0	vscode(&V)	code $C

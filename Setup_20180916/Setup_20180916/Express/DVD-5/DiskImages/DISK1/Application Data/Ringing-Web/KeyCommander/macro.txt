@@ -1,0 +1,9 @@
+MP		ALL Type(&A)	type $A
+M		Copy(&C)	COPY $C $T
+MP		ls(&L)	ls $P
+M		notepad(&N)	notepad $C
+MPS		type(&T)	type $C
+M		さくらエディタ(&S)	"C:\Program Files (x86)\sakura\sakura.exe" $C
+M	test	aa	cc
+M		cmd	start cmd $P
+M		Dir	D:\220again_dosbox\dos220\dosbox.exe -c "mount c d:\220again_dosbox" -c "mount d d:\\" -c "c:"  -c "c:\dos220\autoexec.bat" -c dir $P
