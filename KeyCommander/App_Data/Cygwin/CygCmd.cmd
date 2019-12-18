@@ -4,7 +4,7 @@ set APP=%1
 shift
 set APPPATH=%1
 shift
-cd %1
+cd /D %1
 shift
 set pg=%1
 shift
