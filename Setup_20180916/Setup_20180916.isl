@@ -340,17 +340,17 @@
 		<col def="S0">ISDotNetInstallerArgsCommit</col>
 		<col def="S0">ISDotNetInstallerArgsUninstall</col>
 		<col def="S0">ISDotNetInstallerArgsRollback</col>
-		<row><td>Component</td><td>{D7D29920-A712-4C3B-9D74-BC60657A628E}</td><td>INSTALLDIR</td><td>2</td><td/><td>File</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Component</td><td>{600D04CE-C0A4-4101-9888-BCE10ABD6FD0}</td><td>INSTALLDIR</td><td>2</td><td/><td>File</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ISX_DEFAULTCOMPONENT</td><td>{CA5BFC4F-433C-4495-80C4-8A3E1703E0BA}</td><td>RINGING_WEB1</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ISX_DEFAULTCOMPONENT1</td><td>{FBE37C00-6073-4A86-8A25-166CAEC28939}</td><td>KEYCOMMANDER</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>ISX_DEFAULTCOMPONENT2</td><td>{75AB1606-6FB7-4171-AD93-3BB64EC91021}</td><td>APP_DATA</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ISX_DEFAULTCOMPONENT2</td><td>{2086AC80-24EB-4012-97DA-43723804F0E2}</td><td>APP_DATA</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ISX_DEFAULTCOMPONENT3</td><td>{D4166974-C7CC-4478-9AF3-46C77C7ACDD0}</td><td>KEYCOMMANDER</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>ISX_DEFAULTCOMPONENT4</td><td>{A0FADA12-7C04-400A-BFBC-6D318127F333}</td><td>CYGWIN</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>ISX_DEFAULTCOMPONENT5</td><td>{685ADAA9-3EEF-4540-8F02-BA8A9DDC3845}</td><td>DOSBOX</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ISX_DEFAULTCOMPONENT4</td><td>{0BCEDF68-033C-4D50-8243-0B111583742E}</td><td>CYGWIN</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ISX_DEFAULTCOMPONENT5</td><td>{5E8BFC48-E411-435B-B7E6-54B8C738F405}</td><td>DOSBOX</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ISX_DEFAULTCOMPONENT6</td><td>{34BFE749-66E4-495D-B223-A400C5EFD815}</td><td>INSTALLDIR</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>IS_ININSTALL_SHORTCUT</td><td>{89DF59DE-F4DE-42F6-8CE1-69152131F3AC}</td><td>INSTALLDIR</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>tee.exe</td><td>{AFB6C519-9679-42FE-BF99-05ADEDE0180E}</td><td>KEYCOMMANDER</td><td>2</td><td/><td>tee.exe</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>tee.exe1</td><td>{78187962-665D-4501-A7E2-5ABB4A6B6563}</td><td>APP_DATA</td><td>2</td><td/><td>tee.exe1</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>tee.exe1</td><td>{6ACE3272-7BDC-44C1-99AB-68B9A74C3F22}</td><td>KEYCOMMANDER</td><td>2</td><td/><td>tee.exe1</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>tee.exe2</td><td>{F9FF2D10-17DD-425A-9419-A05065FC3B42}</td><td>APP_DATA</td><td>2</td><td/><td>tee.exe2</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 	</table>
 
 	<table name="Condition">
@@ -1060,7 +1060,7 @@
 		<col key="yes" def="s72">Directory_</col>
 		<col key="yes" def="s72">Component_</col>
 		<row><td>APP_DATA</td><td>ISX_DEFAULTCOMPONENT2</td></row>
-		<row><td>APP_DATA</td><td>tee.exe1</td></row>
+		<row><td>APP_DATA</td><td>tee.exe2</td></row>
 		<row><td>CYGWIN</td><td>ISX_DEFAULTCOMPONENT4</td></row>
 		<row><td>DOSBOX</td><td>ISX_DEFAULTCOMPONENT5</td></row>
 		<row><td>INSTALLDIR</td><td>Component</td></row>
@@ -1072,11 +1072,11 @@
 		<row><td>INSTALLDIR</td><td>ISX_DEFAULTCOMPONENT5</td></row>
 		<row><td>INSTALLDIR</td><td>ISX_DEFAULTCOMPONENT6</td></row>
 		<row><td>INSTALLDIR</td><td>IS_ININSTALL_SHORTCUT</td></row>
-		<row><td>INSTALLDIR</td><td>tee.exe</td></row>
 		<row><td>INSTALLDIR</td><td>tee.exe1</td></row>
+		<row><td>INSTALLDIR</td><td>tee.exe2</td></row>
 		<row><td>KEYCOMMANDER</td><td>ISX_DEFAULTCOMPONENT1</td></row>
 		<row><td>KEYCOMMANDER</td><td>ISX_DEFAULTCOMPONENT3</td></row>
-		<row><td>KEYCOMMANDER</td><td>tee.exe</td></row>
+		<row><td>KEYCOMMANDER</td><td>tee.exe1</td></row>
 		<row><td>RINGING_WEB1</td><td>ISX_DEFAULTCOMPONENT</td></row>
 	</table>
 
@@ -1908,8 +1908,8 @@
 		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT5</td></row>
 		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT6</td></row>
 		<row><td>AlwaysInstall</td><td>IS_ININSTALL_SHORTCUT</td></row>
-		<row><td>AlwaysInstall</td><td>tee.exe</td></row>
 		<row><td>AlwaysInstall</td><td>tee.exe1</td></row>
+		<row><td>AlwaysInstall</td><td>tee.exe2</td></row>
 	</table>
 
 	<table name="File">
@@ -1925,53 +1925,57 @@
 		<col def="I4">ISAttributes</col>
 		<col def="S72">ISComponentSubFolder_</col>
 		<row><td>File</td><td>Component</td><td>KeyCommander.プライマリ出力</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;KeyCommander&gt;|Built</td><td>3</td><td/></row>
-		<row><td>assoc.txt</td><td>ISX_DEFAULTCOMPONENT2</td><td>assoc.txt</td><td>0</td><td/><td/><td/><td>1</td><td>C:\01_kabaDocumernmt\Visual Studio 2012\Projects\KeyCommander1\KeyCommander\App_Data\assoc.txt</td><td>1</td><td/></row>
-		<row><td>assoc.txt1</td><td>ISX_DEFAULTCOMPONENT1</td><td>assoc.txt</td><td>0</td><td/><td/><td/><td>1</td><td>C:\01_kabaDocumernmt\Visual Studio 2012\Projects\KeyCommander1\KeyCommander\bin\x86\Release\assoc.txt</td><td>1</td><td/></row>
-		<row><td>bash.cmd</td><td>ISX_DEFAULTCOMPONENT4</td><td>bash.cmd</td><td>0</td><td/><td/><td/><td>1</td><td>C:\01_kabaDocumernmt\Visual Studio 2012\Projects\KeyCommander1\KeyCommander\App_Data\Cygwin\bash.cmd</td><td>1</td><td/></row>
-		<row><td>cmdlines.txt</td><td>ISX_DEFAULTCOMPONENT1</td><td>cmdlines.txt</td><td>0</td><td/><td/><td/><td>1</td><td>C:\01_kabaDocumernmt\Visual Studio 2012\Projects\KeyCommander1\KeyCommander\bin\x86\Release\cmdlines.txt</td><td>1</td><td/></row>
-		<row><td>cmdlines.txt1</td><td>ISX_DEFAULTCOMPONENT2</td><td>cmdlines.txt</td><td>0</td><td/><td/><td/><td>1</td><td>C:\01_kabaDocumernmt\Visual Studio 2012\Projects\KeyCommander1\KeyCommander\App_Data\cmdlines.txt</td><td>1</td><td/></row>
-		<row><td>cygcmd.cmd</td><td>ISX_DEFAULTCOMPONENT4</td><td>CygCmd.cmd</td><td>0</td><td/><td/><td/><td>1</td><td>C:\01_kabaDocumernmt\Visual Studio 2012\Projects\KeyCommander1\KeyCommander\App_Data\Cygwin\CygCmd.cmd</td><td>1</td><td/></row>
-		<row><td>cygemacs.cmd</td><td>ISX_DEFAULTCOMPONENT4</td><td>CygEmacs.cmd</td><td>0</td><td/><td/><td/><td>1</td><td>C:\01_kabaDocumernmt\Visual Studio 2012\Projects\KeyCommander1\KeyCommander\App_Data\Cygwin\CygEmacs.cmd</td><td>1</td><td/></row>
-		<row><td>cygmintty.cmd</td><td>ISX_DEFAULTCOMPONENT4</td><td>CYGMIN~1.CMD|CygMintty.cmd</td><td>0</td><td/><td/><td/><td>1</td><td>C:\01_kabaDocumernmt\Visual Studio 2012\Projects\KeyCommander1\KeyCommander\App_Data\Cygwin\CygMintty.cmd</td><td>1</td><td/></row>
-		<row><td>data.mdb</td><td>ISX_DEFAULTCOMPONENT2</td><td>data.mdb</td><td>0</td><td/><td/><td/><td>1</td><td>C:\01_kabaDocumernmt\Visual Studio 2012\Projects\KeyCommander1\KeyCommander\App_Data\data.mdb</td><td>1</td><td/></row>
-		<row><td>dirs.txt</td><td>ISX_DEFAULTCOMPONENT1</td><td>dirs.txt</td><td>0</td><td/><td/><td/><td>1</td><td>C:\01_kabaDocumernmt\Visual Studio 2012\Projects\KeyCommander1\KeyCommander\bin\x86\Release\dirs.txt</td><td>1</td><td/></row>
-		<row><td>dirs.txt1</td><td>ISX_DEFAULTCOMPONENT2</td><td>dirs.txt</td><td>0</td><td/><td/><td/><td>1</td><td>C:\01_kabaDocumernmt\Visual Studio 2012\Projects\KeyCommander1\KeyCommander\App_Data\dirs.txt</td><td>1</td><td/></row>
-		<row><td>dobat.bat</td><td>ISX_DEFAULTCOMPONENT1</td><td>dobat.bat</td><td>0</td><td/><td/><td/><td>1</td><td>C:\01_kabaDocumernmt\Visual Studio 2012\Projects\KeyCommander1\KeyCommander\App_Data\dobat.bat</td><td>1</td><td/></row>
-		<row><td>dobat.bat1</td><td>ISX_DEFAULTCOMPONENT2</td><td>dobat.bat</td><td>0</td><td/><td/><td/><td>1</td><td>C:\01_kabaDocumernmt\Visual Studio 2012\Projects\KeyCommander1\KeyCommander\App_Data\dobat.bat</td><td>1</td><td/></row>
-		<row><td>dobat.cmd</td><td>ISX_DEFAULTCOMPONENT2</td><td>dobat.cmd</td><td>0</td><td/><td/><td/><td>1</td><td>C:\01_kabaDocumernmt\Visual Studio 2012\Projects\KeyCommander1\KeyCommander\App_Data\dobat.cmd</td><td>1</td><td/></row>
-		<row><td>dobat.cmd1</td><td>ISX_DEFAULTCOMPONENT1</td><td>dobat.cmd</td><td>0</td><td/><td/><td/><td>1</td><td>C:\01_kabaDocumernmt\Visual Studio 2012\Projects\KeyCommander1\KeyCommander\App_Data\dobat.cmd</td><td>1</td><td/></row>
-		<row><td>dobatp.bat</td><td>ISX_DEFAULTCOMPONENT1</td><td>dobatp.bat</td><td>0</td><td/><td/><td/><td>1</td><td>C:\01_kabaDocumernmt\Visual Studio 2012\Projects\KeyCommander1\KeyCommander\App_Data\dobatp.bat</td><td>1</td><td/></row>
-		<row><td>dobatp.bat1</td><td>ISX_DEFAULTCOMPONENT2</td><td>dobatp.bat</td><td>0</td><td/><td/><td/><td>1</td><td>C:\01_kabaDocumernmt\Visual Studio 2012\Projects\KeyCommander1\KeyCommander\App_Data\dobatp.bat</td><td>1</td><td/></row>
-		<row><td>dobatp.cmd</td><td>ISX_DEFAULTCOMPONENT2</td><td>dobatp.cmd</td><td>0</td><td/><td/><td/><td>1</td><td>C:\01_kabaDocumernmt\Visual Studio 2012\Projects\KeyCommander1\KeyCommander\App_Data\dobatp.cmd</td><td>1</td><td/></row>
-		<row><td>dobatp.cmd1</td><td>ISX_DEFAULTCOMPONENT1</td><td>dobatp.cmd</td><td>0</td><td/><td/><td/><td>1</td><td>C:\01_kabaDocumernmt\Visual Studio 2012\Projects\KeyCommander1\KeyCommander\App_Data\dobatp.cmd</td><td>1</td><td/></row>
-		<row><td>dobatt.bat</td><td>ISX_DEFAULTCOMPONENT1</td><td>dobatt.bat</td><td>0</td><td/><td/><td/><td>1</td><td>C:\01_kabaDocumernmt\Visual Studio 2012\Projects\KeyCommander1\KeyCommander\App_Data\dobatt.bat</td><td>1</td><td/></row>
-		<row><td>dobatt.bat1</td><td>ISX_DEFAULTCOMPONENT2</td><td>dobatt.bat</td><td>0</td><td/><td/><td/><td>1</td><td>C:\01_kabaDocumernmt\Visual Studio 2012\Projects\KeyCommander1\KeyCommander\App_Data\dobatt.bat</td><td>1</td><td/></row>
-		<row><td>dobatt.cmd</td><td>ISX_DEFAULTCOMPONENT2</td><td>dobatt.cmd</td><td>0</td><td/><td/><td/><td>1</td><td>C:\01_kabaDocumernmt\Visual Studio 2012\Projects\KeyCommander1\KeyCommander\App_Data\dobatt.cmd</td><td>1</td><td/></row>
-		<row><td>dobatt.cmd1</td><td>ISX_DEFAULTCOMPONENT1</td><td>dobatt.cmd</td><td>0</td><td/><td/><td/><td>1</td><td>C:\01_kabaDocumernmt\Visual Studio 2012\Projects\KeyCommander1\KeyCommander\App_Data\dobatt.cmd</td><td>1</td><td/></row>
-		<row><td>dobattp.bat</td><td>ISX_DEFAULTCOMPONENT1</td><td>dobattp.bat</td><td>0</td><td/><td/><td/><td>1</td><td>C:\01_kabaDocumernmt\Visual Studio 2012\Projects\KeyCommander1\KeyCommander\App_Data\dobattp.bat</td><td>1</td><td/></row>
-		<row><td>dobattp.bat1</td><td>ISX_DEFAULTCOMPONENT2</td><td>dobattp.bat</td><td>0</td><td/><td/><td/><td>1</td><td>C:\01_kabaDocumernmt\Visual Studio 2012\Projects\KeyCommander1\KeyCommander\App_Data\dobattp.bat</td><td>1</td><td/></row>
-		<row><td>dobattp.cmd</td><td>ISX_DEFAULTCOMPONENT2</td><td>dobattp.cmd</td><td>0</td><td/><td/><td/><td>1</td><td>C:\01_kabaDocumernmt\Visual Studio 2012\Projects\KeyCommander1\KeyCommander\App_Data\dobattp.cmd</td><td>1</td><td/></row>
-		<row><td>dobattp.cmd1</td><td>ISX_DEFAULTCOMPONENT1</td><td>dobattp.cmd</td><td>0</td><td/><td/><td/><td>1</td><td>C:\01_kabaDocumernmt\Visual Studio 2012\Projects\KeyCommander1\KeyCommander\App_Data\dobattp.cmd</td><td>1</td><td/></row>
-		<row><td>exec.bat</td><td>ISX_DEFAULTCOMPONENT5</td><td>exec.BAT</td><td>0</td><td/><td/><td/><td>1</td><td>C:\01_kabaDocumernmt\Visual Studio 2012\Projects\KeyCommander1\KeyCommander\App_Data\dosbox\exec.BAT</td><td>1</td><td/></row>
-		<row><td>exec.cmd</td><td>ISX_DEFAULTCOMPONENT5</td><td>exec.cmd</td><td>0</td><td/><td/><td/><td>1</td><td>C:\01_kabaDocumernmt\Visual Studio 2012\Projects\KeyCommander1\KeyCommander\App_Data\dosbox\exec.cmd</td><td>1</td><td/></row>
-		<row><td>formsize.txt</td><td>ISX_DEFAULTCOMPONENT1</td><td>formsize.txt</td><td>0</td><td/><td/><td/><td>1</td><td>C:\01_kabaDocumernmt\Visual Studio 2012\Projects\KeyCommander1\KeyCommander\bin\x86\Release\formsize.txt</td><td>1</td><td/></row>
-		<row><td>formsize.txt1</td><td>ISX_DEFAULTCOMPONENT2</td><td>formsize.txt</td><td>0</td><td/><td/><td/><td>1</td><td>C:\01_kabaDocumernmt\Visual Studio 2012\Projects\KeyCommander1\KeyCommander\App_Data\formsize.txt</td><td>1</td><td/></row>
-		<row><td>macro.txt</td><td>ISX_DEFAULTCOMPONENT2</td><td>macro.txt</td><td>0</td><td/><td/><td/><td>1</td><td>C:\01_kabaDocumernmt\Visual Studio 2012\Projects\KeyCommander1\KeyCommander\App_Data\macro.txt</td><td>1</td><td/></row>
-		<row><td>macro.txt1</td><td>ISX_DEFAULTCOMPONENT1</td><td>macro.txt</td><td>0</td><td/><td/><td/><td>1</td><td>C:\01_kabaDocumernmt\Visual Studio 2012\Projects\KeyCommander1\KeyCommander\bin\x86\Release\macro.txt</td><td>1</td><td/></row>
-		<row><td>mintty.cmd</td><td>ISX_DEFAULTCOMPONENT4</td><td>mintty.cmd</td><td>0</td><td/><td/><td/><td>1</td><td>C:\01_kabaDocumernmt\Visual Studio 2012\Projects\KeyCommander1\KeyCommander\App_Data\Cygwin\mintty.cmd</td><td>1</td><td/></row>
-		<row><td>mintty_command.cmd</td><td>ISX_DEFAULTCOMPONENT4</td><td>MINTTY~1.CMD|mintty-command.cmd</td><td>0</td><td/><td/><td/><td>1</td><td>C:\01_kabaDocumernmt\Visual Studio 2012\Projects\KeyCommander1\KeyCommander\App_Data\Cygwin\mintty-command.cmd</td><td>1</td><td/></row>
-		<row><td>mintty_emacs.cmd</td><td>ISX_DEFAULTCOMPONENT4</td><td>MINTTY~1.CMD|mintty-emacs.cmd</td><td>0</td><td/><td/><td/><td>1</td><td>C:\01_kabaDocumernmt\Visual Studio 2012\Projects\KeyCommander1\KeyCommander\App_Data\Cygwin\mintty-emacs.cmd</td><td>1</td><td/></row>
-		<row><td>r1.mdb</td><td>ISX_DEFAULTCOMPONENT2</td><td>r1.mdb</td><td>0</td><td/><td/><td/><td>1</td><td>C:\01_kabaDocumernmt\Visual Studio 2012\Projects\KeyCommander1\KeyCommander\App_Data\r1.mdb</td><td>1</td><td/></row>
-		<row><td>shortcuts.txt</td><td>ISX_DEFAULTCOMPONENT2</td><td>SHORTC~1.TXT|shortcuts.txt</td><td>0</td><td/><td/><td/><td>1</td><td>C:\01_kabaDocumernmt\Visual Studio 2012\Projects\KeyCommander1\KeyCommander\App_Data\shortcuts.txt</td><td>1</td><td/></row>
-		<row><td>shortcuts.txt1</td><td>ISX_DEFAULTCOMPONENT1</td><td>SHORTC~1.TXT|shortcuts.txt</td><td>0</td><td/><td/><td/><td>1</td><td>C:\01_kabaDocumernmt\Visual Studio 2012\Projects\KeyCommander1\KeyCommander\bin\x86\Release\shortcuts.txt</td><td>1</td><td/></row>
-		<row><td>tabfiles.txt</td><td>ISX_DEFAULTCOMPONENT1</td><td>tabfiles.txt</td><td>0</td><td/><td/><td/><td>1</td><td>C:\01_kabaDocumernmt\Visual Studio 2012\Projects\KeyCommander1\KeyCommander\bin\x86\Release\tabfiles.txt</td><td>1</td><td/></row>
-		<row><td>tabfiles.txt1</td><td>ISX_DEFAULTCOMPONENT2</td><td>tabfiles.txt</td><td>0</td><td/><td/><td/><td>1</td><td>C:\01_kabaDocumernmt\Visual Studio 2012\Projects\KeyCommander1\KeyCommander\App_Data\tabfiles.txt</td><td>1</td><td/></row>
-		<row><td>tee.exe</td><td>tee.exe</td><td>tee.exe</td><td>0</td><td/><td/><td/><td>1</td><td>C:\01_kabaDocumernmt\Visual Studio 2012\Projects\KeyCommander1\KeyCommander\bin\x86\Release\tee.exe</td><td>1</td><td/></row>
-		<row><td>tee.exe1</td><td>tee.exe1</td><td>tee.exe</td><td>0</td><td/><td/><td/><td>1</td><td>C:\01_kabaDocumernmt\Visual Studio 2012\Projects\KeyCommander1\KeyCommander\App_Data\tee.exe</td><td>1</td><td/></row>
-		<row><td>tmp.txt</td><td>ISX_DEFAULTCOMPONENT1</td><td>tmp.txt</td><td>0</td><td/><td/><td/><td>1</td><td>C:\01_kabaDocumernmt\Visual Studio 2012\Projects\KeyCommander1\KeyCommander\bin\x86\Release\tmp.txt</td><td>1</td><td/></row>
-		<row><td>tmp.txt1</td><td>ISX_DEFAULTCOMPONENT2</td><td>tmp.txt</td><td>0</td><td/><td/><td/><td>1</td><td>C:\01_kabaDocumernmt\Visual Studio 2012\Projects\KeyCommander1\KeyCommander\App_Data\tmp.txt</td><td>1</td><td/></row>
-		<row><td>window1.txt</td><td>ISX_DEFAULTCOMPONENT2</td><td>window1.txt</td><td>0</td><td/><td/><td/><td>1</td><td>C:\01_kabaDocumernmt\Visual Studio 2012\Projects\KeyCommander1\KeyCommander\App_Data\window1.txt</td><td>1</td><td/></row>
-		<row><td>window2.txt</td><td>ISX_DEFAULTCOMPONENT2</td><td>window2.txt</td><td>0</td><td/><td/><td/><td>1</td><td>C:\01_kabaDocumernmt\Visual Studio 2012\Projects\KeyCommander1\KeyCommander\App_Data\window2.txt</td><td>1</td><td/></row>
+		<row><td>assoc.txt</td><td>ISX_DEFAULTCOMPONENT1</td><td>assoc.txt</td><td>0</td><td/><td/><td/><td>1</td><td>M:\09 ViualStudio\Visual Studio 2012\Projects\KeyCommander20191108-\KeyCommander\App_Data\assoc.txt</td><td>1</td><td/></row>
+		<row><td>assoc.txt2</td><td>ISX_DEFAULTCOMPONENT2</td><td>assoc.txt</td><td>0</td><td/><td/><td/><td>1</td><td>M:\09 ViualStudio\Visual Studio 2012\Projects\KeyCommander20191108-\KeyCommander\App_Data\assoc.txt</td><td>1</td><td/></row>
+		<row><td>bash.cmd</td><td>ISX_DEFAULTCOMPONENT4</td><td>bash.cmd</td><td>0</td><td/><td/><td/><td>1</td><td>M:\09 ViualStudio\Visual Studio 2012\Projects\KeyCommander20191108-\KeyCommander\App_Data\Cygwin\bash.cmd</td><td>1</td><td/></row>
+		<row><td>cmdlines.txt1</td><td>ISX_DEFAULTCOMPONENT1</td><td>cmdlines.txt</td><td>0</td><td/><td/><td/><td>1</td><td>M:\09 ViualStudio\Visual Studio 2012\Projects\KeyCommander20191108-\KeyCommander\App_Data\cmdlines.txt</td><td>1</td><td/></row>
+		<row><td>cmdlines.txt2</td><td>ISX_DEFAULTCOMPONENT2</td><td>cmdlines.txt</td><td>0</td><td/><td/><td/><td>1</td><td>M:\09 ViualStudio\Visual Studio 2012\Projects\KeyCommander20191108-\KeyCommander\App_Data\cmdlines.txt</td><td>1</td><td/></row>
+		<row><td>cygcmd.cmd</td><td>ISX_DEFAULTCOMPONENT4</td><td>CygCmd.cmd</td><td>0</td><td/><td/><td/><td>1</td><td>M:\09 ViualStudio\Visual Studio 2012\Projects\KeyCommander20191108-\KeyCommander\App_Data\Cygwin\CygCmd.cmd</td><td>1</td><td/></row>
+		<row><td>cygemacs.cmd</td><td>ISX_DEFAULTCOMPONENT4</td><td>CygEmacs.cmd</td><td>0</td><td/><td/><td/><td>1</td><td>M:\09 ViualStudio\Visual Studio 2012\Projects\KeyCommander20191108-\KeyCommander\App_Data\Cygwin\CygEmacs.cmd</td><td>1</td><td/></row>
+		<row><td>cygmintty.cmd</td><td>ISX_DEFAULTCOMPONENT4</td><td>CYGMIN~1.CMD|CygMintty.cmd</td><td>0</td><td/><td/><td/><td>1</td><td>M:\09 ViualStudio\Visual Studio 2012\Projects\KeyCommander20191108-\KeyCommander\App_Data\Cygwin\CygMintty.cmd</td><td>1</td><td/></row>
+		<row><td>data.mdb</td><td>ISX_DEFAULTCOMPONENT1</td><td>data.mdb</td><td>0</td><td/><td/><td/><td>1</td><td>M:\09 ViualStudio\Visual Studio 2012\Projects\KeyCommander20191108-\KeyCommander\App_Data\data.mdb</td><td>1</td><td/></row>
+		<row><td>data.mdb2</td><td>ISX_DEFAULTCOMPONENT2</td><td>data.mdb</td><td>0</td><td/><td/><td/><td>1</td><td>M:\09 ViualStudio\Visual Studio 2012\Projects\KeyCommander20191108-\KeyCommander\App_Data\data.mdb</td><td>1</td><td/></row>
+		<row><td>dirs.txt1</td><td>ISX_DEFAULTCOMPONENT1</td><td>dirs.txt</td><td>0</td><td/><td/><td/><td>1</td><td>M:\09 ViualStudio\Visual Studio 2012\Projects\KeyCommander20191108-\KeyCommander\App_Data\dirs.txt</td><td>1</td><td/></row>
+		<row><td>dirs.txt2</td><td>ISX_DEFAULTCOMPONENT2</td><td>dirs.txt</td><td>0</td><td/><td/><td/><td>1</td><td>M:\09 ViualStudio\Visual Studio 2012\Projects\KeyCommander20191108-\KeyCommander\App_Data\dirs.txt</td><td>1</td><td/></row>
+		<row><td>dobat.bat1</td><td>ISX_DEFAULTCOMPONENT1</td><td>dobat.bat</td><td>0</td><td/><td/><td/><td>1</td><td>M:\09 ViualStudio\Visual Studio 2012\Projects\KeyCommander20191108-\KeyCommander\App_Data\dobat.bat</td><td>1</td><td/></row>
+		<row><td>dobat.bat2</td><td>ISX_DEFAULTCOMPONENT2</td><td>dobat.bat</td><td>0</td><td/><td/><td/><td>1</td><td>M:\09 ViualStudio\Visual Studio 2012\Projects\KeyCommander20191108-\KeyCommander\App_Data\dobat.bat</td><td>1</td><td/></row>
+		<row><td>dobat.cmd</td><td>ISX_DEFAULTCOMPONENT1</td><td>dobat.cmd</td><td>0</td><td/><td/><td/><td>1</td><td>M:\09 ViualStudio\Visual Studio 2012\Projects\KeyCommander20191108-\KeyCommander\App_Data\dobat.cmd</td><td>1</td><td/></row>
+		<row><td>dobat.cmd2</td><td>ISX_DEFAULTCOMPONENT2</td><td>dobat.cmd</td><td>0</td><td/><td/><td/><td>1</td><td>M:\09 ViualStudio\Visual Studio 2012\Projects\KeyCommander20191108-\KeyCommander\App_Data\dobat.cmd</td><td>1</td><td/></row>
+		<row><td>dobatp.bat1</td><td>ISX_DEFAULTCOMPONENT1</td><td>dobatp.bat</td><td>0</td><td/><td/><td/><td>1</td><td>M:\09 ViualStudio\Visual Studio 2012\Projects\KeyCommander20191108-\KeyCommander\App_Data\dobatp.bat</td><td>1</td><td/></row>
+		<row><td>dobatp.bat2</td><td>ISX_DEFAULTCOMPONENT2</td><td>dobatp.bat</td><td>0</td><td/><td/><td/><td>1</td><td>M:\09 ViualStudio\Visual Studio 2012\Projects\KeyCommander20191108-\KeyCommander\App_Data\dobatp.bat</td><td>1</td><td/></row>
+		<row><td>dobatp.cmd</td><td>ISX_DEFAULTCOMPONENT1</td><td>dobatp.cmd</td><td>0</td><td/><td/><td/><td>1</td><td>M:\09 ViualStudio\Visual Studio 2012\Projects\KeyCommander20191108-\KeyCommander\App_Data\dobatp.cmd</td><td>1</td><td/></row>
+		<row><td>dobatp.cmd2</td><td>ISX_DEFAULTCOMPONENT2</td><td>dobatp.cmd</td><td>0</td><td/><td/><td/><td>1</td><td>M:\09 ViualStudio\Visual Studio 2012\Projects\KeyCommander20191108-\KeyCommander\App_Data\dobatp.cmd</td><td>1</td><td/></row>
+		<row><td>dobatt.bat1</td><td>ISX_DEFAULTCOMPONENT1</td><td>dobatt.bat</td><td>0</td><td/><td/><td/><td>1</td><td>M:\09 ViualStudio\Visual Studio 2012\Projects\KeyCommander20191108-\KeyCommander\App_Data\dobatt.bat</td><td>1</td><td/></row>
+		<row><td>dobatt.bat2</td><td>ISX_DEFAULTCOMPONENT2</td><td>dobatt.bat</td><td>0</td><td/><td/><td/><td>1</td><td>M:\09 ViualStudio\Visual Studio 2012\Projects\KeyCommander20191108-\KeyCommander\App_Data\dobatt.bat</td><td>1</td><td/></row>
+		<row><td>dobatt.cmd</td><td>ISX_DEFAULTCOMPONENT1</td><td>dobatt.cmd</td><td>0</td><td/><td/><td/><td>1</td><td>M:\09 ViualStudio\Visual Studio 2012\Projects\KeyCommander20191108-\KeyCommander\App_Data\dobatt.cmd</td><td>1</td><td/></row>
+		<row><td>dobatt.cmd2</td><td>ISX_DEFAULTCOMPONENT2</td><td>dobatt.cmd</td><td>0</td><td/><td/><td/><td>1</td><td>M:\09 ViualStudio\Visual Studio 2012\Projects\KeyCommander20191108-\KeyCommander\App_Data\dobatt.cmd</td><td>1</td><td/></row>
+		<row><td>dobattp.bat1</td><td>ISX_DEFAULTCOMPONENT1</td><td>dobattp.bat</td><td>0</td><td/><td/><td/><td>1</td><td>M:\09 ViualStudio\Visual Studio 2012\Projects\KeyCommander20191108-\KeyCommander\App_Data\dobattp.bat</td><td>1</td><td/></row>
+		<row><td>dobattp.bat2</td><td>ISX_DEFAULTCOMPONENT2</td><td>dobattp.bat</td><td>0</td><td/><td/><td/><td>1</td><td>M:\09 ViualStudio\Visual Studio 2012\Projects\KeyCommander20191108-\KeyCommander\App_Data\dobattp.bat</td><td>1</td><td/></row>
+		<row><td>dobattp.cmd</td><td>ISX_DEFAULTCOMPONENT1</td><td>dobattp.cmd</td><td>0</td><td/><td/><td/><td>1</td><td>M:\09 ViualStudio\Visual Studio 2012\Projects\KeyCommander20191108-\KeyCommander\App_Data\dobattp.cmd</td><td>1</td><td/></row>
+		<row><td>dobattp.cmd2</td><td>ISX_DEFAULTCOMPONENT2</td><td>dobattp.cmd</td><td>0</td><td/><td/><td/><td>1</td><td>M:\09 ViualStudio\Visual Studio 2012\Projects\KeyCommander20191108-\KeyCommander\App_Data\dobattp.cmd</td><td>1</td><td/></row>
+		<row><td>exec.bat</td><td>ISX_DEFAULTCOMPONENT5</td><td>exec.BAT</td><td>0</td><td/><td/><td/><td>1</td><td>M:\09 ViualStudio\Visual Studio 2012\Projects\KeyCommander20191108-\KeyCommander\App_Data\dosbox\exec.BAT</td><td>1</td><td/></row>
+		<row><td>exec.cmd</td><td>ISX_DEFAULTCOMPONENT5</td><td>exec.cmd</td><td>0</td><td/><td/><td/><td>1</td><td>M:\09 ViualStudio\Visual Studio 2012\Projects\KeyCommander20191108-\KeyCommander\App_Data\dosbox\exec.cmd</td><td>1</td><td/></row>
+		<row><td>formsize.txt1</td><td>ISX_DEFAULTCOMPONENT1</td><td>formsize.txt</td><td>0</td><td/><td/><td/><td>1</td><td>M:\09 ViualStudio\Visual Studio 2012\Projects\KeyCommander20191108-\KeyCommander\App_Data\formsize.txt</td><td>1</td><td/></row>
+		<row><td>formsize.txt2</td><td>ISX_DEFAULTCOMPONENT2</td><td>formsize.txt</td><td>0</td><td/><td/><td/><td>1</td><td>M:\09 ViualStudio\Visual Studio 2012\Projects\KeyCommander20191108-\KeyCommander\App_Data\formsize.txt</td><td>1</td><td/></row>
+		<row><td>macro.txt</td><td>ISX_DEFAULTCOMPONENT1</td><td>macro.txt</td><td>0</td><td/><td/><td/><td>1</td><td>M:\09 ViualStudio\Visual Studio 2012\Projects\KeyCommander20191108-\KeyCommander\App_Data\macro.txt</td><td>1</td><td/></row>
+		<row><td>macro.txt2</td><td>ISX_DEFAULTCOMPONENT2</td><td>macro.txt</td><td>0</td><td/><td/><td/><td>1</td><td>M:\09 ViualStudio\Visual Studio 2012\Projects\KeyCommander20191108-\KeyCommander\App_Data\macro.txt</td><td>1</td><td/></row>
+		<row><td>mintty.cmd</td><td>ISX_DEFAULTCOMPONENT4</td><td>mintty.cmd</td><td>0</td><td/><td/><td/><td>1</td><td>M:\09 ViualStudio\Visual Studio 2012\Projects\KeyCommander20191108-\KeyCommander\App_Data\Cygwin\mintty.cmd</td><td>1</td><td/></row>
+		<row><td>mintty_command.cmd</td><td>ISX_DEFAULTCOMPONENT4</td><td>MINTTY~1.CMD|mintty-command.cmd</td><td>0</td><td/><td/><td/><td>1</td><td>M:\09 ViualStudio\Visual Studio 2012\Projects\KeyCommander20191108-\KeyCommander\App_Data\Cygwin\mintty-command.cmd</td><td>1</td><td/></row>
+		<row><td>mintty_emacs.cmd</td><td>ISX_DEFAULTCOMPONENT4</td><td>MINTTY~1.CMD|mintty-emacs.cmd</td><td>0</td><td/><td/><td/><td>1</td><td>M:\09 ViualStudio\Visual Studio 2012\Projects\KeyCommander20191108-\KeyCommander\App_Data\Cygwin\mintty-emacs.cmd</td><td>1</td><td/></row>
+		<row><td>r1.mdb</td><td>ISX_DEFAULTCOMPONENT1</td><td>r1.mdb</td><td>0</td><td/><td/><td/><td>1</td><td>M:\09 ViualStudio\Visual Studio 2012\Projects\KeyCommander20191108-\KeyCommander\App_Data\r1.mdb</td><td>1</td><td/></row>
+		<row><td>r1.mdb2</td><td>ISX_DEFAULTCOMPONENT2</td><td>r1.mdb</td><td>0</td><td/><td/><td/><td>1</td><td>M:\09 ViualStudio\Visual Studio 2012\Projects\KeyCommander20191108-\KeyCommander\App_Data\r1.mdb</td><td>1</td><td/></row>
+		<row><td>shortcuts.txt</td><td>ISX_DEFAULTCOMPONENT1</td><td>SHORTC~1.TXT|shortcuts.txt</td><td>0</td><td/><td/><td/><td>1</td><td>M:\09 ViualStudio\Visual Studio 2012\Projects\KeyCommander20191108-\KeyCommander\App_Data\shortcuts.txt</td><td>1</td><td/></row>
+		<row><td>shortcuts.txt2</td><td>ISX_DEFAULTCOMPONENT2</td><td>SHORTC~1.TXT|shortcuts.txt</td><td>0</td><td/><td/><td/><td>1</td><td>M:\09 ViualStudio\Visual Studio 2012\Projects\KeyCommander20191108-\KeyCommander\App_Data\shortcuts.txt</td><td>1</td><td/></row>
+		<row><td>tabfiles.txt1</td><td>ISX_DEFAULTCOMPONENT1</td><td>tabfiles.txt</td><td>0</td><td/><td/><td/><td>1</td><td>M:\09 ViualStudio\Visual Studio 2012\Projects\KeyCommander20191108-\KeyCommander\App_Data\tabfiles.txt</td><td>1</td><td/></row>
+		<row><td>tabfiles.txt2</td><td>ISX_DEFAULTCOMPONENT2</td><td>tabfiles.txt</td><td>0</td><td/><td/><td/><td>1</td><td>M:\09 ViualStudio\Visual Studio 2012\Projects\KeyCommander20191108-\KeyCommander\App_Data\tabfiles.txt</td><td>1</td><td/></row>
+		<row><td>tee.exe1</td><td>tee.exe1</td><td>tee.exe</td><td>0</td><td/><td/><td/><td>1</td><td>M:\09 ViualStudio\Visual Studio 2012\Projects\KeyCommander20191108-\KeyCommander\App_Data\tee.exe</td><td>1</td><td/></row>
+		<row><td>tee.exe2</td><td>tee.exe2</td><td>tee.exe</td><td>0</td><td/><td/><td/><td>1</td><td>M:\09 ViualStudio\Visual Studio 2012\Projects\KeyCommander20191108-\KeyCommander\App_Data\tee.exe</td><td>1</td><td/></row>
+		<row><td>tmp.txt1</td><td>ISX_DEFAULTCOMPONENT1</td><td>tmp.txt</td><td>0</td><td/><td/><td/><td>1</td><td>M:\09 ViualStudio\Visual Studio 2012\Projects\KeyCommander20191108-\KeyCommander\App_Data\tmp.txt</td><td>1</td><td/></row>
+		<row><td>tmp.txt2</td><td>ISX_DEFAULTCOMPONENT2</td><td>tmp.txt</td><td>0</td><td/><td/><td/><td>1</td><td>M:\09 ViualStudio\Visual Studio 2012\Projects\KeyCommander20191108-\KeyCommander\App_Data\tmp.txt</td><td>1</td><td/></row>
+		<row><td>window1.txt</td><td>ISX_DEFAULTCOMPONENT1</td><td>window1.txt</td><td>0</td><td/><td/><td/><td>1</td><td>M:\09 ViualStudio\Visual Studio 2012\Projects\KeyCommander20191108-\KeyCommander\App_Data\window1.txt</td><td>1</td><td/></row>
+		<row><td>window1.txt2</td><td>ISX_DEFAULTCOMPONENT2</td><td>window1.txt</td><td>0</td><td/><td/><td/><td>1</td><td>M:\09 ViualStudio\Visual Studio 2012\Projects\KeyCommander20191108-\KeyCommander\App_Data\window1.txt</td><td>1</td><td/></row>
+		<row><td>window2.txt</td><td>ISX_DEFAULTCOMPONENT1</td><td>window2.txt</td><td>0</td><td/><td/><td/><td>1</td><td>M:\09 ViualStudio\Visual Studio 2012\Projects\KeyCommander20191108-\KeyCommander\App_Data\window2.txt</td><td>1</td><td/></row>
+		<row><td>window2.txt2</td><td>ISX_DEFAULTCOMPONENT2</td><td>window2.txt</td><td>0</td><td/><td/><td/><td>1</td><td>M:\09 ViualStudio\Visual Studio 2012\Projects\KeyCommander20191108-\KeyCommander\App_Data\window2.txt</td><td>1</td><td/></row>
 	</table>
 
 	<table name="FileSFPCatalog">
@@ -2114,17 +2118,17 @@
 		<col def="S0">FTPLocation</col>
 		<col def="S0">HTTPLocation</col>
 		<col def="S0">Miscellaneous</col>
-		<row><td>Component</td><td/><td/><td>_E768CD1F_FFDE_45F5_9908_1A26126E662A_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Component</td><td/><td/><td>_DE6A3A11_CDDC_458C_A855_F37D01351524_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ISX_DEFAULTCOMPONENT</td><td/><td/><td>_119C83DE_3ABA_4D91_9DB2_15E49BE362DD_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ISX_DEFAULTCOMPONENT1</td><td/><td/><td>_779CE9CC_86B8_48AE_829D_7212110F6196_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>ISX_DEFAULTCOMPONENT2</td><td/><td/><td>_D74B6616_6EA9_45E9_8E9E_A875C56D87BF_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ISX_DEFAULTCOMPONENT2</td><td/><td/><td>_3AD18A76_5D3E_41B9_A876_964E1136B5F9_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ISX_DEFAULTCOMPONENT3</td><td/><td/><td>_38D03764_D429_41BB_A73C_B3039E1F42DF_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>ISX_DEFAULTCOMPONENT4</td><td/><td/><td>_FDE6B3E6_9CB3_429F_9786_A6F04F9ABC5C_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>ISX_DEFAULTCOMPONENT5</td><td/><td/><td>_B0CF3E7B_D373_4032_B8FB_D55832C423FD_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ISX_DEFAULTCOMPONENT4</td><td/><td/><td>_EB3AA262_B209_4D98_B31D_135E4F86D9D5_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ISX_DEFAULTCOMPONENT5</td><td/><td/><td>_29DE8199_D8F8_4817_9C9A_D872C68BED44_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ISX_DEFAULTCOMPONENT6</td><td/><td/><td>_AF3147CC_238A_4C57_B7A1_9995F858836C_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>IS_ININSTALL_SHORTCUT</td><td/><td/><td>_358B7144_EF22_4F76_86DC_BECBEFEBF49D_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>tee.exe</td><td/><td/><td>_3B57E5D6_FD5F_4958_BF8B_0A0338CE7BC4_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>tee.exe1</td><td/><td/><td>_0EBB90B0_462E_41EA_B16A_CCD6E9BEFC13_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>tee.exe1</td><td/><td/><td>_F2552C98_4606_434B_9E2B_BD2FC43CE08C_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>tee.exe2</td><td/><td/><td>_9E6D2F48_55DE_426C_9A6D_A4F7D69A0449_FILTER</td><td/><td/><td/><td/></row>
 	</table>
 
 	<table name="ISCustomActionReference">
@@ -2714,7 +2718,7 @@
 		<col def="I2">Encoded</col>
 		<col def="S0">Comment</col>
 		<col def="I4">TimeStamp</col>
-		<row><td>COMPANY_NAME</td><td>1041</td><td>Ringing-Web</td><td>0</td><td/><td>-1775805710</td></row>
+		<row><td>COMPANY_NAME</td><td>1041</td><td>Ringing-Web</td><td>0</td><td/><td>-1775817262</td></row>
 		<row><td>DN_AlwaysInstall</td><td>1041</td><td>常にインストール</td><td>0</td><td/><td>-2069469400</td></row>
 		<row><td>IDPROP_EXPRESS_LAUNCH_CONDITION_COLOR</td><td>1041</td><td>このｼｽﾃﾑの色設定では、[ProductName] を実行できません。</td><td>0</td><td/><td>-2069469400</td></row>
 		<row><td>IDPROP_EXPRESS_LAUNCH_CONDITION_DOTNETVERSION40CLIENT</td><td>1041</td><td>Microsoft .NET Framework 4.0 Client Package or greater needs to be installed for this installation to continue.</td><td>0</td><td/><td>-2069469400</td></row>
@@ -3530,6 +3534,12 @@
 		<row><td>IDS_SETUPEXE_EXPIRE_MSG</td><td>1041</td><td>このセットアップは %s まで有効です。セットアップを終了します。</td><td>0</td><td/><td>-2069469400</td></row>
 		<row><td>IDS_SETUPEXE_LAUNCH_COND_E</td><td>1041</td><td>このセットアップは InstallShield の評価版でビルドされているため、Setup.exe からのみ起動できます。</td><td>0</td><td/><td>-2069469400</td></row>
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME1</td><td>1041</td><td>tee.exe</td><td>0</td><td/><td>-2069469400</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME10</td><td>1033</td><td/><td>0</td><td/><td>-1775825582</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME10</td><td>1041</td><td>LAUNCH~1.EXE|Launch tee.exe</td><td>0</td><td/><td>-1775825582</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME11</td><td>1033</td><td/><td>0</td><td/><td>-1775786670</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME11</td><td>1041</td><td>LAUNCH~1.EXE|Launch tee.exe</td><td>0</td><td/><td>-1775786670</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME12</td><td>1033</td><td/><td>0</td><td/><td>-1775819406</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME12</td><td>1041</td><td>LAUNCH~1.EXE|Launch tee.exe</td><td>0</td><td/><td>-1775819406</td></row>
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME2</td><td>1033</td><td/><td>0</td><td/><td>1436992851</td></row>
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME2</td><td>1041</td><td>LAUNCH~1.EXE|Launch tee.exe</td><td>0</td><td/><td>1436992851</td></row>
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME3</td><td>1033</td><td/><td>0</td><td/><td>422021413</td></row>
@@ -3542,6 +3552,10 @@
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME6</td><td>1041</td><td>LAUNCH~1.EXE|Launch tee.exe</td><td>0</td><td/><td>-1700277395</td></row>
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME7</td><td>1033</td><td/><td>0</td><td/><td>-1775768846</td></row>
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME7</td><td>1041</td><td>KeyCommander</td><td>0</td><td/><td>-1775820014</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME8</td><td>1033</td><td/><td>0</td><td/><td>-1775807214</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME8</td><td>1041</td><td>LAUNCH~1.EXE|Launch tee.exe</td><td>0</td><td/><td>-1775807214</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME9</td><td>1033</td><td/><td>0</td><td/><td>-1775803086</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME9</td><td>1041</td><td>LAUNCH~1.EXE|Launch tee.exe</td><td>0</td><td/><td>-1775803086</td></row>
 		<row><td>IDS_SQLBROWSE_INTRO</td><td>1041</td><td>以下のサーバーリストから、ターゲットにするデータベースサーバーを選択します。</td><td>0</td><td/><td>-2069469400</td></row>
 		<row><td>IDS_SQLBROWSE_INTRO_DB</td><td>1041</td><td>以下のカタログ名一覧から、ターゲットにするデータベース カタログを選択してください。</td><td>0</td><td/><td>-2069469400</td></row>
 		<row><td>IDS_SQLBROWSE_INTRO_TEMPLATE</td><td>1041</td><td>[IS_SQLBROWSE_INTRO]</td><td>0</td><td/><td>-2069469400</td></row>
@@ -3830,8 +3844,8 @@
 		<row><td>IDS__TargetReq_DESC_PROCESSOR</td><td>1041</td><td>このプロセッサは、[ProductName] の実行に適切ではありません。</td><td>0</td><td/><td>-2069469400</td></row>
 		<row><td>IDS__TargetReq_DESC_RAM</td><td>1041</td><td>RAM 容量が、[ProductName] の実行に適切ではありません。</td><td>0</td><td/><td>-2069469400</td></row>
 		<row><td>IDS__TargetReq_DESC_RESOLUTION</td><td>1041</td><td>画面の解像度が、[ProductName] の実行に適切ではありません。</td><td>0</td><td/><td>-2069469400</td></row>
-		<row><td>ID_STRING1</td><td>1041</td><td>http://www.Ringing-Web.com</td><td>0</td><td/><td>-1775805710</td></row>
-		<row><td>ID_STRING2</td><td>1041</td><td>Ringing-Web</td><td>0</td><td/><td>-1775805710</td></row>
+		<row><td>ID_STRING1</td><td>1041</td><td>http://www.Ringing-Web.com</td><td>0</td><td/><td>-1775817262</td></row>
+		<row><td>ID_STRING2</td><td>1041</td><td>Ringing-Web</td><td>0</td><td/><td>-1775817262</td></row>
 		<row><td>ID_STRING3</td><td>1041</td><td>KEYCOM~1|KeyCommander</td><td>0</td><td/><td>-2069469400</td></row>
 		<row><td>ID_STRING4</td><td>1041</td><td>KEYCOM~1|KeyCommander</td><td>0</td><td/><td>-2069469400</td></row>
 		<row><td>ID_STRING6</td><td>1033</td><td>NEWSHO~1|NewShortcut2</td><td>0</td><td/><td>-1373203118</td></row>
@@ -3958,10 +3972,15 @@
 		<row><td>NewShortcut2_9CABCAB9981843CEB625D4C7FEFF257B.exe</td><td/><td>&lt;VSSolutionFolder&gt;\KeyCommander\KEYS03.ICO</td><td>0</td></row>
 		<row><td>UNINST_Uninstall_S_7E795160ED794B49B94A23AB69AEF25F.exe</td><td/><td>C:\Program Files (x86)\InstallShield\2015LE\Redist\Language Independent\OS Independent\uninstall.ico</td><td>0</td></row>
 		<row><td>_Built_42ED67250AD04DE297F0790D150E7D96.exe</td><td/><td>&lt;VSSolutionFolder&gt;\KeyCommander\KEYS03.ICO</td><td>0</td></row>
+		<row><td>tee.exe1_4438BD6621B94045B8405E904132878A.exe</td><td/><td>&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\GenericExe.ico</td><td>0</td></row>
 		<row><td>tee.exe1_59129A11FB4B4BB0872CCB5324BDCCE5.exe</td><td/><td>&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\GenericExe.ico</td><td>0</td></row>
+		<row><td>tee.exe1_94882A9103004C94AAB19C290FCA61E6.exe</td><td/><td>&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\GenericExe.ico</td><td>0</td></row>
+		<row><td>tee.exe2_4A83682AF03243CF9324ACE14F0C68E1.exe</td><td/><td>&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\GenericExe.ico</td><td>0</td></row>
+		<row><td>tee.exe_0360E75C51FD4B0EB60F402F94A0B78D.exe</td><td/><td>&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\GenericExe.ico</td><td>0</td></row>
 		<row><td>tee.exe_230999C825A0495CB48161ABA0A28C33.exe</td><td/><td>&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\GenericExe.ico</td><td>0</td></row>
 		<row><td>tee.exe_6FA4D4C85BE449A3A515DCE24759161D.exe</td><td/><td>&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\GenericExe.ico</td><td>0</td></row>
 		<row><td>tee.exe_AADA3CFBA34349EEAA745939F305788C.exe</td><td/><td>&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\GenericExe.ico</td><td>0</td></row>
+		<row><td>tee.exe_B229A71CF73F4CF9B1547C99323D45DA.exe</td><td/><td>&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\GenericExe.ico</td><td>0</td></row>
 		<row><td>tee.exe_F9CCCEFBCEE14B4CA6B36FEBA455C585.exe</td><td/><td>&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\GenericExe.ico</td><td>0</td></row>
 	</table>
 
@@ -4547,8 +4566,8 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<col def="s72">DirProperty</col>
 		<col def="i2">InstallMode</col>
 		<row><td>UNINST_Uninstall_Setup</td><td>IS_ININSTALL_SHORTCUT</td><td/><td>keycom_1_keycommander</td><td>2</td></row>
-		<row><td>_Built</td><td>Component</td><td/><td>keycom_1_keycommander</td><td>2</td></row>
-		<row><td>tee.exe</td><td>tee.exe</td><td/><td>keycom_1_keycommander</td><td>2</td></row>
+		<row><td>tee.exe1</td><td>tee.exe1</td><td/><td>keycom_1_keycommander</td><td>2</td></row>
+		<row><td>tee.exe2</td><td>tee.exe2</td><td/><td>keycom_1_keycommander</td><td>2</td></row>
 	</table>
 
 	<table name="RemoveIniFile">
@@ -4635,8 +4654,8 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<col def="S255">ISShortcutName</col>
 		<col def="I4">ISAttributes</col>
 		<row><td>UNINST_Uninstall_Setup</td><td>keycom_1_keycommander</td><td>UNINST|Uninstall Setup</td><td>IS_ININSTALL_SHORTCUT</td><td>[SystemFolder]msiexec.exe</td><td>/x {D585183C-6438-46D9-99D7-639440E22331}</td><td/><td/><td>UNINST_Uninstall_S_7E795160ED794B49B94A23AB69AEF25F.exe</td><td>0</td><td>1</td><td/><td/><td/><td/><td/><td/><td/><td/></row>
-		<row><td>_Built</td><td>keycom_1_keycommander</td><td>##IDS_SHORTCUT_DISPLAY_NAME7##</td><td>Component</td><td>AlwaysInstall</td><td/><td/><td/><td>_Built_42ED67250AD04DE297F0790D150E7D96.exe</td><td>0</td><td>1</td><td/><td/><td/><td/><td/><td/><td/><td/></row>
-		<row><td>tee.exe</td><td>keycom_1_keycommander</td><td>##IDS_SHORTCUT_DISPLAY_NAME4##</td><td>tee.exe</td><td>AlwaysInstall</td><td/><td/><td/><td>tee.exe_230999C825A0495CB48161ABA0A28C33.exe</td><td>0</td><td>1</td><td>KEYCOMMANDER</td><td/><td/><td/><td/><td/><td/><td/></row>
+		<row><td>tee.exe1</td><td>keycom_1_keycommander</td><td>##IDS_SHORTCUT_DISPLAY_NAME11##</td><td>tee.exe1</td><td>AlwaysInstall</td><td/><td/><td/><td>tee.exe1_94882A9103004C94AAB19C290FCA61E6.exe</td><td>0</td><td>1</td><td>KEYCOMMANDER</td><td/><td/><td/><td/><td/><td/><td/></row>
+		<row><td>tee.exe2</td><td>keycom_1_keycommander</td><td>##IDS_SHORTCUT_DISPLAY_NAME12##</td><td>tee.exe2</td><td>AlwaysInstall</td><td/><td/><td/><td>tee.exe2_4A83682AF03243CF9324ACE14F0C68E1.exe</td><td>0</td><td>1</td><td>APP_DATA</td><td/><td/><td/><td/><td/><td/><td/></row>
 	</table>
 
 	<table name="Signature">
