@@ -101,6 +101,7 @@ Global
 		{4CB5BD34-DFEB-42C6-A0E8-0CD65718693A}.Release|Any CPU.ActiveCfg = SingleImage
 		{4CB5BD34-DFEB-42C6-A0E8-0CD65718693A}.Release|Any CPU.Build.0 = SingleImage
 		{4CB5BD34-DFEB-42C6-A0E8-0CD65718693A}.Release|Mixed Platforms.ActiveCfg = SingleImage
+		{4CB5BD34-DFEB-42C6-A0E8-0CD65718693A}.Release|Mixed Platforms.Build.0 = SingleImage
 		{4CB5BD34-DFEB-42C6-A0E8-0CD65718693A}.Release|x86.ActiveCfg = SingleImage
 		{4CB5BD34-DFEB-42C6-A0E8-0CD65718693A}.Release|x86.Build.0 = SingleImage
 		{4CB5BD34-DFEB-42C6-A0E8-0CD65718693A}.Release2|Any CPU.ActiveCfg = SingleImage

@@ -7,12 +7,12 @@
   </global>
   <input>
     <asmlist>
-      <inputassembly refid="c6d557cb-2857-4f75-9ec0-28e1222612b6">
+      <inputassembly refid="bac87b2b-1d0b-4685-88cb-9a876d7ad1e8">
         <option>honoroas</option>
         <option>stripoa</option>
         <option>library</option>
         <option>transformxaml</option>
-        <file dir="C:\01_kabaDocumernmt\Visual Studio 2012\Projects\KeyCommander1\KeyCommander\bin\x86\Release" name="KeyCommander.exe" />
+        <file dir="M:\09 ViualStudio\Visual Studio 2012\Projects\KeyCommander20191108-\KeyCommander\bin\x86\Release" name="KeyCommander.exe" />
       </inputassembly>
     </asmlist>
   </input>
