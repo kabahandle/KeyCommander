@@ -340,7 +340,7 @@
 		<col def="S0">ISDotNetInstallerArgsCommit</col>
 		<col def="S0">ISDotNetInstallerArgsUninstall</col>
 		<col def="S0">ISDotNetInstallerArgsRollback</col>
-		<row><td>Component</td><td>{BA76BE78-400B-49FB-A78E-9A588C5C2265}</td><td>INSTALLDIR</td><td>2</td><td/><td>File</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Component</td><td>{D7D29920-A712-4C3B-9D74-BC60657A628E}</td><td>INSTALLDIR</td><td>2</td><td/><td>File</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ISX_DEFAULTCOMPONENT</td><td>{CA5BFC4F-433C-4495-80C4-8A3E1703E0BA}</td><td>RINGING_WEB1</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ISX_DEFAULTCOMPONENT1</td><td>{FBE37C00-6073-4A86-8A25-166CAEC28939}</td><td>KEYCOMMANDER</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ISX_DEFAULTCOMPONENT2</td><td>{75AB1606-6FB7-4171-AD93-3BB64EC91021}</td><td>APP_DATA</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
@@ -2114,7 +2114,7 @@
 		<col def="S0">FTPLocation</col>
 		<col def="S0">HTTPLocation</col>
 		<col def="S0">Miscellaneous</col>
-		<row><td>Component</td><td/><td/><td>_C38DE9D2_D188_4C4B_9943_F80C0001FD29_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Component</td><td/><td/><td>_E768CD1F_FFDE_45F5_9908_1A26126E662A_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ISX_DEFAULTCOMPONENT</td><td/><td/><td>_119C83DE_3ABA_4D91_9DB2_15E49BE362DD_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ISX_DEFAULTCOMPONENT1</td><td/><td/><td>_779CE9CC_86B8_48AE_829D_7212110F6196_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ISX_DEFAULTCOMPONENT2</td><td/><td/><td>_D74B6616_6EA9_45E9_8E9E_A875C56D87BF_FILTER</td><td/><td/><td/><td/></row>
@@ -2714,7 +2714,7 @@
 		<col def="I2">Encoded</col>
 		<col def="S0">Comment</col>
 		<col def="I4">TimeStamp</col>
-		<row><td>COMPANY_NAME</td><td>1041</td><td>Ringing-Web</td><td>0</td><td/><td>-1700299763</td></row>
+		<row><td>COMPANY_NAME</td><td>1041</td><td>Ringing-Web</td><td>0</td><td/><td>-1775805710</td></row>
 		<row><td>DN_AlwaysInstall</td><td>1041</td><td>常にインストール</td><td>0</td><td/><td>-2069469400</td></row>
 		<row><td>IDPROP_EXPRESS_LAUNCH_CONDITION_COLOR</td><td>1041</td><td>このｼｽﾃﾑの色設定では、[ProductName] を実行できません。</td><td>0</td><td/><td>-2069469400</td></row>
 		<row><td>IDPROP_EXPRESS_LAUNCH_CONDITION_DOTNETVERSION40CLIENT</td><td>1041</td><td>Microsoft .NET Framework 4.0 Client Package or greater needs to be installed for this installation to continue.</td><td>0</td><td/><td>-2069469400</td></row>
@@ -3540,6 +3540,8 @@
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME5</td><td>1041</td><td>LAUNCH~1.EXE|Launch tee.exe</td><td>0</td><td/><td>-1700314259</td></row>
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME6</td><td>1033</td><td/><td>0</td><td/><td>-1700277395</td></row>
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME6</td><td>1041</td><td>LAUNCH~1.EXE|Launch tee.exe</td><td>0</td><td/><td>-1700277395</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME7</td><td>1033</td><td/><td>0</td><td/><td>-1775768846</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME7</td><td>1041</td><td>KeyCommander</td><td>0</td><td/><td>-1775820014</td></row>
 		<row><td>IDS_SQLBROWSE_INTRO</td><td>1041</td><td>以下のサーバーリストから、ターゲットにするデータベースサーバーを選択します。</td><td>0</td><td/><td>-2069469400</td></row>
 		<row><td>IDS_SQLBROWSE_INTRO_DB</td><td>1041</td><td>以下のカタログ名一覧から、ターゲットにするデータベース カタログを選択してください。</td><td>0</td><td/><td>-2069469400</td></row>
 		<row><td>IDS_SQLBROWSE_INTRO_TEMPLATE</td><td>1041</td><td>[IS_SQLBROWSE_INTRO]</td><td>0</td><td/><td>-2069469400</td></row>
@@ -3828,8 +3830,8 @@
 		<row><td>IDS__TargetReq_DESC_PROCESSOR</td><td>1041</td><td>このプロセッサは、[ProductName] の実行に適切ではありません。</td><td>0</td><td/><td>-2069469400</td></row>
 		<row><td>IDS__TargetReq_DESC_RAM</td><td>1041</td><td>RAM 容量が、[ProductName] の実行に適切ではありません。</td><td>0</td><td/><td>-2069469400</td></row>
 		<row><td>IDS__TargetReq_DESC_RESOLUTION</td><td>1041</td><td>画面の解像度が、[ProductName] の実行に適切ではありません。</td><td>0</td><td/><td>-2069469400</td></row>
-		<row><td>ID_STRING1</td><td>1041</td><td>http://www.Ringing-Web.com</td><td>0</td><td/><td>-1700299763</td></row>
-		<row><td>ID_STRING2</td><td>1041</td><td>Ringing-Web</td><td>0</td><td/><td>-1700299763</td></row>
+		<row><td>ID_STRING1</td><td>1041</td><td>http://www.Ringing-Web.com</td><td>0</td><td/><td>-1775805710</td></row>
+		<row><td>ID_STRING2</td><td>1041</td><td>Ringing-Web</td><td>0</td><td/><td>-1775805710</td></row>
 		<row><td>ID_STRING3</td><td>1041</td><td>KEYCOM~1|KeyCommander</td><td>0</td><td/><td>-2069469400</td></row>
 		<row><td>ID_STRING4</td><td>1041</td><td>KEYCOM~1|KeyCommander</td><td>0</td><td/><td>-2069469400</td></row>
 		<row><td>ID_STRING6</td><td>1033</td><td>NEWSHO~1|NewShortcut2</td><td>0</td><td/><td>-1373203118</td></row>
@@ -3955,8 +3957,8 @@
 		<row><td>NewShortcut21_095FC22356234FD2A548DC883F1951C1.exe</td><td/><td>&lt;VSSolutionFolder&gt;\KeyCommander\KEYS03.ICO</td><td>0</td></row>
 		<row><td>NewShortcut2_9CABCAB9981843CEB625D4C7FEFF257B.exe</td><td/><td>&lt;VSSolutionFolder&gt;\KeyCommander\KEYS03.ICO</td><td>0</td></row>
 		<row><td>UNINST_Uninstall_S_7E795160ED794B49B94A23AB69AEF25F.exe</td><td/><td>C:\Program Files (x86)\InstallShield\2015LE\Redist\Language Independent\OS Independent\uninstall.ico</td><td>0</td></row>
+		<row><td>_Built_42ED67250AD04DE297F0790D150E7D96.exe</td><td/><td>&lt;VSSolutionFolder&gt;\KeyCommander\KEYS03.ICO</td><td>0</td></row>
 		<row><td>tee.exe1_59129A11FB4B4BB0872CCB5324BDCCE5.exe</td><td/><td>&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\GenericExe.ico</td><td>0</td></row>
-		<row><td>tee.exe1_B7310B3D60D34B0C84CD1EFDB11B4D99.exe</td><td/><td>&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\GenericExe.ico</td><td>0</td></row>
 		<row><td>tee.exe_230999C825A0495CB48161ABA0A28C33.exe</td><td/><td>&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\GenericExe.ico</td><td>0</td></row>
 		<row><td>tee.exe_6FA4D4C85BE449A3A515DCE24759161D.exe</td><td/><td>&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\GenericExe.ico</td><td>0</td></row>
 		<row><td>tee.exe_AADA3CFBA34349EEAA745939F305788C.exe</td><td/><td>&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\GenericExe.ico</td><td>0</td></row>
@@ -4544,10 +4546,9 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<col def="L255">FileName</col>
 		<col def="s72">DirProperty</col>
 		<col def="i2">InstallMode</col>
-		<row><td>NewShortcut21</td><td>Component</td><td/><td>keycom_1_keycommander</td><td>2</td></row>
 		<row><td>UNINST_Uninstall_Setup</td><td>IS_ININSTALL_SHORTCUT</td><td/><td>keycom_1_keycommander</td><td>2</td></row>
+		<row><td>_Built</td><td>Component</td><td/><td>keycom_1_keycommander</td><td>2</td></row>
 		<row><td>tee.exe</td><td>tee.exe</td><td/><td>keycom_1_keycommander</td><td>2</td></row>
-		<row><td>tee.exe1</td><td>tee.exe1</td><td/><td>keycom_1_keycommander</td><td>2</td></row>
 	</table>
 
 	<table name="RemoveIniFile">
@@ -4633,11 +4634,9 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<col def="S255">ISComments</col>
 		<col def="S255">ISShortcutName</col>
 		<col def="I4">ISAttributes</col>
-		<row><td>NewShortcut2</td><td>DesktopFolder</td><td>##ID_STRING6##</td><td>Component</td><td>AlwaysInstall</td><td/><td/><td/><td>NewShortcut2_9CABCAB9981843CEB625D4C7FEFF257B.exe</td><td>0</td><td>1</td><td/><td/><td/><td/><td/><td/><td/><td/></row>
-		<row><td>NewShortcut21</td><td>keycom_1_keycommander</td><td>##ID_STRING8##</td><td>Component</td><td>AlwaysInstall</td><td/><td/><td/><td>NewShortcut21_095FC22356234FD2A548DC883F1951C1.exe</td><td>0</td><td>1</td><td/><td/><td/><td/><td/><td/><td/><td/></row>
 		<row><td>UNINST_Uninstall_Setup</td><td>keycom_1_keycommander</td><td>UNINST|Uninstall Setup</td><td>IS_ININSTALL_SHORTCUT</td><td>[SystemFolder]msiexec.exe</td><td>/x {D585183C-6438-46D9-99D7-639440E22331}</td><td/><td/><td>UNINST_Uninstall_S_7E795160ED794B49B94A23AB69AEF25F.exe</td><td>0</td><td>1</td><td/><td/><td/><td/><td/><td/><td/><td/></row>
+		<row><td>_Built</td><td>keycom_1_keycommander</td><td>##IDS_SHORTCUT_DISPLAY_NAME7##</td><td>Component</td><td>AlwaysInstall</td><td/><td/><td/><td>_Built_42ED67250AD04DE297F0790D150E7D96.exe</td><td>0</td><td>1</td><td/><td/><td/><td/><td/><td/><td/><td/></row>
 		<row><td>tee.exe</td><td>keycom_1_keycommander</td><td>##IDS_SHORTCUT_DISPLAY_NAME4##</td><td>tee.exe</td><td>AlwaysInstall</td><td/><td/><td/><td>tee.exe_230999C825A0495CB48161ABA0A28C33.exe</td><td>0</td><td>1</td><td>KEYCOMMANDER</td><td/><td/><td/><td/><td/><td/><td/></row>
-		<row><td>tee.exe1</td><td>keycom_1_keycommander</td><td>##IDS_SHORTCUT_DISPLAY_NAME6##</td><td>tee.exe1</td><td>AlwaysInstall</td><td/><td/><td/><td>tee.exe1_B7310B3D60D34B0C84CD1EFDB11B4D99.exe</td><td>0</td><td>1</td><td>APP_DATA</td><td/><td/><td/><td/><td/><td/><td/></row>
 	</table>
 
 	<table name="Signature">
