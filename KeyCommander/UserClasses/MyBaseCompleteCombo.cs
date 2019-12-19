@@ -565,6 +565,12 @@ case Keys.D9:*/
                         this.SelectionLength = 0;
                         break;
                 }
+                if (e.KeyCode == Keys.Delete)   // Keys.Backと同等
+                {
+                    //e.KeyCode = Keys.Back;
+                    this.SelectedText = string.Empty;
+                }
+
             }
 
 

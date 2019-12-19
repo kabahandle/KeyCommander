@@ -404,16 +404,44 @@ namespace KCommander.UserClasses
 
                 if (this.Items.Count > 0)
                 {
-                    if (prevDir != null && prevDir.Equals(this.CurDir))
+                    string prevFileName = Path.GetFileName(prevDir).Trim();
+                    string curdir = this.curDir;
+                    if (!curdir.EndsWith("\\"))
                     {
-                        if (prev_line > Items.Count)
+                        curdir += "\\";
+                    }
+                    //if (prevrDir != null && prevDir.Equals(this.CurDir))
+                    //if (this.CurDir != null && CurDir.Equals(prevDir))
+                    if (prevDir != null && prevDir.Equals(curdir + prevFileName))
+                    {
+                        //if (prev_line > Items.Count)
+                        //{
+                        //    prev_line = Items.Count - 1;
+                        //}
+
+                        //this.Items[prev_line].Focused = true;
+                        //this.Items[prev_line].Selected = true;
+                        //this.Items[prev_line].EnsureVisible();
+
+                        int prev_line2 = 0;
+                        foreach (ListViewItem item in this.Items)
+                        {
+                            if (item != null && item.Text.Equals(prevFileName))
+                            {
+                                break;
+                            }
+                            prev_line2++;
+                        }
+                        
+                        if (prev_line2 > Items.Count)
                         {
                             prev_line = Items.Count - 1;
                         }
 
-                        this.Items[prev_line].Focused = true;
-                        this.Items[prev_line].Selected = true;
-                        this.Items[prev_line].EnsureVisible();
+                        this.Items[prev_line2].Focused = true;
+                        this.Items[prev_line2].Selected = true;
+                        this.Items[prev_line2].EnsureVisible();
+
                     }
                     else
                     {
