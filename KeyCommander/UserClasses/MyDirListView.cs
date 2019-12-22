@@ -920,9 +920,9 @@ namespace KCommander.UserClasses
                 if (!string.IsNullOrEmpty(flag) && flag.Contains("S"))
                 {
 #if DEBUG
-                    this.CallBatch("M", "notepad \"" + Application.StartupPath + @"\tmp.txt", "");
+                    this.CallBatch("M", "notepad \"" + Application.StartupPath + "\\tmp.txt\"", "");
 #else
-                    this.CallBatch("M", "notepad \"" + DataFilePath.Path + @"\tmp.txt", "");
+                    this.CallBatch("M", "notepad \"" + DataFilePath.Path + "\\tmp.txt\"", "");
 #endif
                 }
             }
@@ -1244,9 +1244,9 @@ namespace KCommander.UserClasses
             if (!string.IsNullOrEmpty(flag) && flag.Contains("S"))
             {
 #if DEBUG
-                this.CallBatch("M", "notepad \"" + Application.StartupPath + @"\tmp.txt", "");
+                this.CallBatch("M", "notepad \"" + Application.StartupPath + "\\tmp.txt\"", "");
 #else
-                this.CallBatch("M", "notepad \"" + DataFilePath.Path + @"\tmp.txt", "");
+                this.CallBatch("M", "notepad \"" + DataFilePath.Path + "\\tmp.txt\"", "\");
 #endif
             }
         }
