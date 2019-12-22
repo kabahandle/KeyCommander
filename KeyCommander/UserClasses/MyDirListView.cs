@@ -957,6 +957,7 @@ namespace KCommander.UserClasses
 #if DEBUG
                     startInfo.Arguments = string.Format("/c dobatp.bat \"{0}\" \"{1}\" \"{2}\" {3} {4}"/*, DRV*/, Application.StartupPath + @"\tee", DataFilePath.Path + @"\tmp.txt", this.CurDir, macro, param);
                     //startInfo.Arguments = string.Format("/c dobat.cmd \"{0}\" {1} {2}", this.CurDir, macro, param);
+                    Console.WriteLine(startInfo.FileName + " /c dobatp.bat: " + macro + param);
 #else
                     //startInfo.Arguments = string.Format(" /c \"" + cmdFilePath + "dobattp.bat\" \"{0}\" \"{1}\" \"{2}\" {3} {4}", Application.StartupPath + @"\tee", Application.StartupPath + @"\tmp.txt", this.CurDir, macro, param);
                     startInfo.FileName = "\"" + cmdFilePath + "dobattp.bat\"";
@@ -969,6 +970,7 @@ namespace KCommander.UserClasses
 #if DEBUG
                     startInfo.Arguments = string.Format("/c dobatp.bat \"{0}\" {1} {2}"/*, DRV*/, this.CurDir, macro, param);
                     //MessageBox.Show(string.Format(System.Environment.GetEnvironmentVariable("ComSpec") + " /c " + cmdFilePath + "dobatp.bat \"{0}\" {1} {2}", this.CurDir, macro, param));
+                    Console.WriteLine(startInfo.FileName + "/c dobatp.bat: " + macro + param);
 #else
                     //startInfo.Arguments = string.Format(" /c \"" + cmdFilePath + "dobatp.bat\" \"{0}\" {1} {2}", this.CurDir, macro, param);
                     startInfo.FileName = "\"" + cmdFilePath + "dobatp.bat\"";
@@ -987,6 +989,7 @@ namespace KCommander.UserClasses
                 {
 #if DEBUG
                     startInfo.Arguments = string.Format("/c dobatt.bat \"{0}\" \"{1}\" \"{2}\" {3}"/*, DRV*/,Application.StartupPath + @"\tee", DataFilePath.Path + @"\tmp.txt", this.CurDir, macro, param);
+                    Console.WriteLine(startInfo.FileName + "/c dobatt.bat: " + macro + param);
 #else
                     //startInfo.Arguments = string.Format(" /c \"" + cmdFilePath + "dobatt.bat\" "\"{0}\" \"{1}\" \"{2}\" {3}", cmdFilePath + @"\tee", Application.StartupPath + @"\tmp.txt", this.CurDir, macro, param);
                     startInfo.FileName = "\"" + cmdFilePath + "dobatt.bat\"";
@@ -1000,6 +1003,7 @@ namespace KCommander.UserClasses
                 {
 #if DEBUG
                     startInfo.Arguments = string.Format("/c dobat.bat \"{0}\" {1} {2}"/*, DRV*/, this.CurDir, macro, param);
+                    Console.WriteLine(startInfo.FileName + "/c dobat.bat: " + macro + param);
 #else
                     //startInfo.Arguments = string.Format(" /c \"" + cmdFilePath + "dobat.bat\" \"{0}\" {1} {2}", this.CurDir, macro, param);
                     startInfo.FileName = "\"" + cmdFilePath + "dobat.bat\"";
