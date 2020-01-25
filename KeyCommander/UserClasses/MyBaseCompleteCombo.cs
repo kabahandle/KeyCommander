@@ -79,6 +79,8 @@ namespace KCommander.UserClasses
             base.OnKeyPress(e);
         }
 
+        private int prevPos = 0;
+
         protected override void OnKeyDown(KeyEventArgs e)
         {
             string text = this.Text;
@@ -196,6 +198,8 @@ namespace KCommander.UserClasses
                     lastSearchedkeyTAB = this.HeaderingMarkSprit(this.SelectedText);
                     lastSelectionStartTAB = this.SelectionStart;
 
+                    prevPos = pos;
+
                     e.Handled = true;
                     e.SuppressKeyPress = true;
                     return;
@@ -203,15 +207,96 @@ namespace KCommander.UserClasses
 
                 if (pos - lastSelectionStartTAB >= 0)
                 {
-                    this.SelectionStart = lastSelectionStartTAB;
-                    this.SelectionLength = pos - lastSelectionStartTAB;
+                    if (pos > 0 && ((this.SelectionStart - 1) > 0))
+                    {
+                        string prev1Text = this.Text.Substring(this.SelectionStart - 1, 1);
+
+                        if (" ".Equals(prev1Text) || "　".Equals(prev1Text))
+                        {
+
+                            //
+                            int lentmp = this.SelectionLength;
+                            this.SelectionStart = lastSelectionStartTAB - 1;
+                            //this.SelectionLength = pos - lastSelectionStartTAB + 1;
+                            this.SelectionLength = lentmp + 1;
+
+                            lastSearchedkeyTAB = this.HeaderingMarkSprit(this.SelectedText);
+                            lastSelectionStartTAB = this.SelectionStart;
+
+#if DEBUG
+                            Console.WriteLine("extend keyTAB=" + lastSearchedkeyTAB);
+                            Console.WriteLine("  selstart=" + this.SelectionStart.ToString());
+                            Console.WriteLine("  sellen=" + this.SelectionLength.ToString());
+                            Console.WriteLine("  pos=" + pos.ToString());
+                            Console.WriteLine("  lastTAB=" + lastSelectionStartTAB.ToString());
+#endif
+
+                            e.Handled = true;
+                            e.SuppressKeyPress = true;
+                            return;
+                        }
+                    }
+
+
+                    bool space_inline_mode2 = false;
+                    //string selWord = (string.IsNullOrEmpty(this.Text)) ? "" : this.Text.Substring(0, pos);
+                    string selWord = this.SelectedText;
+                    int cnt = 0;
+                    char[] selWordsCharReverse = selWord.ToCharArray().Reverse<char>().ToArray<char>();
+                    foreach (char c in selWordsCharReverse)
+                    {
+                        if ('"'.Equals(c) /* && ( (cnt < selWordsCharReverse.Length ) && selWordsCharReverse[cnt] != '\\')*/ )
+                        {
+                            space_inline_mode2 = !space_inline_mode2;
+                            continue;
+                        }
+                        if (' '.Equals(c) || "　".Equals(c.ToString()) )
+                        {
+                            if (space_inline_mode2)
+                            {
+                                continue;
+                            }
+                            else
+                            {
+                                break;
+                            }
+                        }
+                        pos_bias++;
+                        cnt++;
+
+                    }
+                    int len_bias = 0;
+                    int tmpSelStert = lastSelectionStartTAB - pos_bias;
+                    if (tmpSelStert <= 1) tmpSelStert = 0;
+                    if (lastSearchedIndexTAB < pos_bias)
+                    {
+                        //tmpSelStert = pos_bias + 1;
+                        tmpSelStert = lastSelectionStartTAB - 1;
+                        len_bias = 1;
+                    }
+                    this.SelectionStart = tmpSelStert;
+                    this.SelectionLength += pos_bias + len_bias;
+                    int lentmp2 = this.SelectionLength;
+                    //this.SelectionStart = lastSelectionStartTAB;
+                    //this.SelectionLength = pos - lastSelectionStartTAB;
+
 
                     lastSearchedkeyTAB = this.HeaderingMarkSprit(this.SelectedText);
                     lastSelectionStartTAB = this.SelectionStart;
+                    //prevPos = pos;
+
+#if DEBUG
+                    Console.WriteLine("normal keyTAB=" + lastSearchedkeyTAB);
+                    Console.WriteLine("  selstart=" + this.SelectionStart.ToString());
+                    Console.WriteLine("  sellen=" + this.SelectionLength.ToString());
+                    Console.WriteLine("  pos=" + pos.ToString());
+                    Console.WriteLine("  lastTAB=" + lastSelectionStartTAB.ToString());
+#endif
+
+                    e.Handled = true;
+                    e.SuppressKeyPress = true;
+                    return;
                 }
-                e.Handled = true;
-                e.SuppressKeyPress = true;
-                return;
             }
 
             if (e.KeyCode == Keys.Tab)
