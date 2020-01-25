@@ -79,6 +79,11 @@ namespace KCommander.UserClasses
             base.OnKeyPress(e);
         }
 
+          // 文字の出現回数をカウント
+        public int CountChar(string s, char c) 
+        {
+            return s.Length - s.Replace(c.ToString(), "").Length;
+        }
         private int prevPos = 0;
 
         protected override void OnKeyDown(KeyEventArgs e)
@@ -160,6 +165,24 @@ namespace KCommander.UserClasses
             if (e.Control && e.KeyValue == (int)Keys.R)
             {
                 int pos = this.SelectionStart;
+
+                int start = this.SelectionStart;
+                int len = this.SelectionLength;
+                //if (this.SelectedText.StartsWith("\""))
+                //{
+                //    start = start - 1;
+                //    len = len - 1;
+                //}
+                //if (this.SelectedText.EndsWith("\""))
+                //{
+                //    len = len - 1;
+                //}
+
+                //this.SelectedText = this.SelectedText.Replace("\"", "");
+                //this.SelectionStart = start;
+                //this.SelectionLength = len;
+
+                //int pos = this.SelectionStart;
                 int pos_bias = 0;
                 if (this.SelectionLength == 0)
                 {
@@ -293,6 +316,33 @@ namespace KCommander.UserClasses
                     Console.WriteLine("  lastTAB=" + lastSelectionStartTAB.ToString());
 #endif
 
+                    start = this.SelectionStart;
+                    len = this.SelectionLength;
+                    if (this.SelectedText.Contains(" ") || this.SelectedText.Contains("　"))
+                    {
+                        int quotes_num = this.CountChar(this.SelectedText, '"');
+
+                        this.SelectionStart = start;
+                        this.SelectionLength = len;
+
+                        this.SelectedText = this.SelectedText.Replace("\"", "");
+                        len = len - quotes_num;
+
+                        this.SelectionStart = start;
+                        this.SelectionLength = len;
+
+                        this.SelectedText = "\"" + this.SelectedText;
+                        //start = start - 1;
+                        len = len + 1;
+
+                        this.SelectedText = this.SelectedText + "\"";
+                        len = len + 1;
+
+                        this.SelectionStart = start;
+                        this.SelectionLength = len;
+                        lastSearchedkeyTAB = this.HeaderingMarkSprit(this.SelectedText/*.Replace("\"","")*/);
+                        lastSelectionStartTAB = start;
+                    }
                     e.Handled = true;
                     e.SuppressKeyPress = true;
                     return;
@@ -367,15 +417,28 @@ namespace KCommander.UserClasses
                         }
                         try
                         {
+                            string basedir = string.Empty;
+
                             if (!curListViewDir.EndsWith(@"\"))
                             {
-                                _cursubdirs = Directory.GetDirectories(curListViewDir + @"\" + lastSearchedkeyTAB);
+                                basedir = Path.GetDirectoryName(curListViewDir + @"\" + lastSearchedkeyTAB.Replace("\"", ""));
+                            }
+                            else
+                            {
+                                basedir = Path.GetDirectoryName(curListViewDir + lastSearchedkeyTAB.Replace("\"", ""));
+                            }
+
+                            if (!curListViewDir.EndsWith(@"\"))
+                            {
+                                //_cursubdirs = Directory.GetDirectories(curListViewDir + @"\" + lastSearchedkeyTAB);
+                                _cursubdirs = Directory.GetDirectories(basedir);
                                 _cursubfiles = Directory.GetFiles(curListViewDir + @"\" + lastSearchedkeyTAB);
                             }
                             else
                             {
-                                _cursubdirs = Directory.GetDirectories(curListViewDir + lastSearchedkeyTAB);
-                                _cursubfiles = Directory.GetFiles(curListViewDir + lastSearchedkeyTAB);
+                                //_cursubdirs = Directory.GetDirectories(curListViewDir + lastSearchedkeyTAB.Replace("\"", ""));
+                                _cursubdirs = Directory.GetDirectories(basedir);
+                                _cursubfiles = Directory.GetFiles(curListViewDir + lastSearchedkeyTAB.Replace("\"", ""));
                             }
 
                             if (_cursubdirs != null && _cursubfiles != null)
@@ -383,11 +446,11 @@ namespace KCommander.UserClasses
                                 foreach (string d in _cursubdirs)
                                 {
                                     //curDirs.Add(Path.GetDirectoryName(d));
-                                    curSubDirs.Add(lastSearchedkeyTAB + Path.GetFileName(d));
+                                    curSubDirs.Add(lastSearchedkeyTAB.Replace("\"", "") + Path.GetFileName(d));
                                 }
                                 foreach (string f in _cursubfiles)
                                 {
-                                    curSubFiles.Add(lastSearchedkeyTAB + Path.GetFileName(f));
+                                    curSubFiles.Add(lastSearchedkeyTAB.Replace("\"", "") + Path.GetFileName(f));
                                 }
                             }
                         }
@@ -412,7 +475,7 @@ namespace KCommander.UserClasses
                 string dir = string.Empty;
                 try
                 {
-                    dir = Path.GetDirectoryName(lastSearchedkeyTAB);
+                    dir = Path.GetDirectoryName(lastSearchedkeyTAB.Replace("\"", ""));
 
                     // "c:\\"の場合、dirが""になってしまう↑のを改修
                     try
@@ -420,7 +483,7 @@ namespace KCommander.UserClasses
                         if (string.IsNullOrEmpty(dir))
                         {
                             Regex reg = new Regex(@"^([a-zA-Z]:\\?).*$");
-                            Match m = reg.Match(lastSearchedkeyTAB);
+                            Match m = reg.Match(lastSearchedkeyTAB.Replace("\"", ""));
                             if (m.Groups.Count > 0)
                             {
                                 if (m.Groups[0].Value.Length > 0)
@@ -884,7 +947,7 @@ case Keys.D9:*/
         {
             foreach (string file in files)
             {
-                string fullpath = lastSearchedkeyTAB + @"\" + file;
+                string fullpath = lastSearchedkeyTAB.Replace("\"","") + @"\" + file;
                 FileSystemType type = FigureOutIsFileOrDirectory(file);
 
                 if (!string.IsNullOrEmpty(file))
@@ -894,19 +957,24 @@ case Keys.D9:*/
                     {
                         continue;
                     }
-                    if (file.ToLower().StartsWith(lastSearchedkeyTAB.ToLower()))
+                    if (file.ToLower().StartsWith(lastSearchedkeyTAB.Replace("\"","").ToLower()))
                     {
+                        string file2 = file;
+                        if (lastSearchedkeyTAB.Contains(" ") || lastSearchedkeyTAB.Contains("　"))
+                        {
+                            file2 = "\"" + file2 + "\"";
+                        }
                         onCompleting = true;
                         if (this.SelectedText.Length != 0)
                         {
                             int selStart = this.SelectionStart;
-                            this.SelectedText = this.currentHeaderFlag + file;
+                            this.SelectedText = this.currentHeaderFlag + file2;
                             this.SelectionStart = selStart;
-                            this.SelectionLength = file.Length + this.currentHeaderFlag.Length;
+                            this.SelectionLength = file2.Length + this.currentHeaderFlag.Length;
                         }
                         else
                         {
-                            this.Text = this.currentHeaderFlag + file;
+                            this.Text = this.currentHeaderFlag + file2;
                             this.SelectionStart = this.Text.Length;
                         }
                         lastSearchedIndexTAB = index;
