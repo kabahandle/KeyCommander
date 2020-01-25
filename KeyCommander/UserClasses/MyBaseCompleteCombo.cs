@@ -418,58 +418,119 @@ namespace KCommander.UserClasses
                         try
                         {
                             string basedir = string.Empty;
+                            string searchFile = string.Empty;
+                            System.IO.DirectoryInfo di = null;
+                            System.IO.FileInfo[] aryFiles = null;
+                            List<string> filepathes = new List<string>();
 
+                            
                             if (!curListViewDir.EndsWith(@"\"))
                             {
-                                basedir = Path.GetDirectoryName(curListViewDir + @"\" + lastSearchedkeyTAB.Replace("\"", ""));
+                                if (System.IO.Directory.Exists(curListViewDir + @"\" + lastSearchedkeyTAB.Replace("\"", "")))
+                                {
+                                    basedir = curListViewDir + @"\" + lastSearchedkeyTAB.Replace("\"", "") + "\\";
+                                    searchFile = "*";
+                                }
+                                else
+                                {
+                                    basedir = Path.GetDirectoryName(curListViewDir + @"\" + lastSearchedkeyTAB.Replace("\"", ""));
+                                    searchFile = Path.GetFileName(curListViewDir + @"\" + lastSearchedkeyTAB.Replace("\"", "")) + "*";
+                                }
                             }
                             else
                             {
-                                basedir = Path.GetDirectoryName(curListViewDir + lastSearchedkeyTAB.Replace("\"", ""));
+                                if (System.IO.Directory.Exists(curListViewDir + lastSearchedkeyTAB.Replace("\"", "")))
+                                {
+                                    basedir = curListViewDir + lastSearchedkeyTAB.Replace("\"", "");
+                                    searchFile = "*";
+                                }
+                                else
+                                {
+                                    basedir = Path.GetDirectoryName(curListViewDir + lastSearchedkeyTAB.Replace("\"", ""));
+                                    searchFile = Path.GetFileName(curListViewDir + lastSearchedkeyTAB.Replace("\"", "")) + "*";
+                                }
                             }
 
-                            if (!curListViewDir.EndsWith(@"\"))
+                            if (basedir.EndsWith(@"\"))
                             {
                                 //_cursubdirs = Directory.GetDirectories(curListViewDir + @"\" + lastSearchedkeyTAB);
-                                _cursubdirs = Directory.GetDirectories(basedir);
-                                _cursubfiles = Directory.GetFiles(curListViewDir + @"\" + lastSearchedkeyTAB);
+                                //_cursubfiles = Directory.GetFiles(curListViewDir + @"\" + lastSearchedkeyTAB);
+                                _cursubdirs = Directory.GetDirectories(basedir, searchFile);
+
+                                //"C:\test"以下の".txt"ファイルをすべて取得する
+                                di = new System.IO.DirectoryInfo(basedir);
+                                //aryFiles = di.GetFiles(lastSearchedkeyTAB.Replace("\"", "").Replace(basedir, "") + "*", System.IO.SearchOption.TopDirectoryOnly);
+                                //foreach (System.IO.FileInfo f in aryFiles)
+                                //{
+                                //    filepathes.Add(f.FullName);
+                                //}
+                                //_curfiles = filepathes.ToArray<string>();
+                                _curfiles = Directory.GetFiles(basedir, searchFile);
+                                //_cursubfiles = Directory.GetFiles(basedir,lastSearchedkeyTAB.Replace("\"", "") + "*");
                             }
                             else
                             {
                                 //_cursubdirs = Directory.GetDirectories(curListViewDir + lastSearchedkeyTAB.Replace("\"", ""));
-                                _cursubdirs = Directory.GetDirectories(basedir);
-                                _cursubfiles = Directory.GetFiles(curListViewDir + lastSearchedkeyTAB.Replace("\"", ""));
+                                //_cursubfiles = Directory.GetFiles(curListViewDir + lastSearchedkeyTAB.Replace("\"", ""));
+                                _cursubdirs = Directory.GetDirectories(basedir, searchFile);
+                                //_cursubfiles = Directory.GetFiles(basedir + "\\" , lastSearchedkeyTAB.Replace("\"", "") + "*");
+                                di = new System.IO.DirectoryInfo(basedir);
+                                //aryFiles = di.GetFiles(lastSearchedkeyTAB.Replace("\"", "").Replace(basedir, "") + "*", System.IO.SearchOption.TopDirectoryOnly);
+                                //aryFiles = di.GetFiles(searchFile, System.IO.SearchOption.TopDirectoryOnly);
+                                //foreach (System.IO.FileInfo f in aryFiles)
+                                //{
+                                //    filepathes.Add(f.FullName);
+                                //}
+                                //_curfiles = filepathes.ToArray<string>();
+                                _curfiles = Directory.GetFiles(basedir, searchFile);
                             }
 
-                            if (_cursubdirs != null && _cursubfiles != null)
+                            string drv = basedir.Substring(0, 3);
+                            string basedir2 = basedir.Replace(drv, "");
+                            if (_cursubdirs != null)
                             {
                                 foreach (string d in _cursubdirs)
                                 {
-                                    //curDirs.Add(Path.GetDirectoryName(d));
-                                    curSubDirs.Add(lastSearchedkeyTAB.Replace("\"", "") + Path.GetFileName(d));
+                                    //curSubDirs.Add(Path.GetDirectoryName(d));
+                                    curSubDirs.Add(d.Replace(drv,""));
+                                    //curSubDirs.Add(lastSearchedkeyTAB.Replace("\"", "") + Path.GetFileName(d));
                                 }
+                            }
+                            if (_cursubfiles != null)
+                            {
                                 foreach (string f in _cursubfiles)
                                 {
-                                    curSubFiles.Add(lastSearchedkeyTAB.Replace("\"", "") + Path.GetFileName(f));
+                                    //curSubFiles.Add(lastSearchedkeyTAB.Replace("\"", "") + Path.GetFileName(f));
+                                    if (basedir.EndsWith("\\"))
+                                    {
+                                        curSubFiles.Add(basedir2 + Path.GetFileName(f));
+                                    }
+                                    else
+                                    {
+                                        curSubFiles.Add(basedir2 + "\\" + Path.GetFileName(f));
+                                    }
                                 }
                             }
                         }
                         catch (Exception excp)
                         {
                         }
-                        if (curSubDirs != null && curSubFiles != null)
+                        if (curSubDirs != null)
                         {
                             targets.AddRange(curSubDirs);
+                        }
+                        if (curSubFiles != null)
+                        {
                             targets.AddRange(curSubFiles);
                         }
 
                     }
 
-                    if (curDirs != null && curFiles != null)
-                    {
-                        targets.AddRange(curDirs);
-                        targets.AddRange(curFiles);
-                    }
+                    //if (curDirs != null && curFiles != null)
+                    //{
+                    //    targets.AddRange(curDirs);
+                    //    targets.AddRange(curFiles);
+                    //}
                 }
 
                 string dir = string.Empty;
