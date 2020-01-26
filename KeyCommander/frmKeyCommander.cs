@@ -548,6 +548,7 @@ namespace KCommander
 
             //メニュー
             this.Menu = new MainMenu();
+
             this.Menu.MenuItems.Add("ファイル(&F)");
             MenuItem mProgramFolder = new MenuItem("プログラムフォルダ(&P)");
             mProgramFolder.Click += delegate
@@ -562,7 +563,15 @@ namespace KCommander
                 Process process = Process.Start(startInfo);
             };
             this.Menu.MenuItems[0].MenuItems.Add(mProgramFolder);
+            this.Menu.MenuItems[0].MenuItems.Add("-");
+            MenuItem mExit = new MenuItem("終了(&E)");
+            mExit.Click += delegate
+            {
+                this.Close();
+            };
+            this.Menu.MenuItems[0].MenuItems.Add(mExit);
 
+            
             this.Menu.MenuItems.Add("設定(&S)");
 
             //this.Menu.MenuItems[1].MenuItems.Add("マクロ(&M)");
