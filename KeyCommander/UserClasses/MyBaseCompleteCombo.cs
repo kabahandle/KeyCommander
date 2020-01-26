@@ -297,7 +297,10 @@ namespace KCommander.UserClasses
                     if (isExistsSpace)
                     {
                         //tmpSelStert = pos_bias + 1;
-                        tmpSelStert = lastSelectionStartTAB - 1;
+                        if (lastSelectionStartTAB - 1 >= 0)
+                        {
+                            tmpSelStert = lastSelectionStartTAB - 1;
+                        }
                         len_bias = 1;
                     }
                     this.SelectionStart = tmpSelStert;
