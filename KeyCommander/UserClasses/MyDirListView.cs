@@ -435,12 +435,15 @@ namespace KCommander.UserClasses
                         
                         if (prev_line2 > Items.Count)
                         {
-                            prev_line = Items.Count - 1;
+                            prev_line2 = Items.Count - 1;
                         }
 
-                        this.Items[prev_line2].Focused = true;
-                        this.Items[prev_line2].Selected = true;
-                        this.Items[prev_line2].EnsureVisible();
+                        if (this.Items.Count > prev_line2)
+                        {
+                            this.Items[prev_line2].Focused = true;
+                            this.Items[prev_line2].Selected = true;
+                            this.Items[prev_line2].EnsureVisible();
+                        }
 
                     }
                     else
