@@ -36,9 +36,11 @@ namespace KCommander
             this.btnClearDirHistory = new System.Windows.Forms.Button();
             this.btnClearCurrentDirHistory = new System.Windows.Forms.Button();
             this.btnSetCmbDir = new System.Windows.Forms.Button();
+            this.cmbDir = new KCommander.UserClasses.MyDirCombo();
             this.btnShowIntoTab2 = new System.Windows.Forms.Button();
             this.btnShowIntotab = new System.Windows.Forms.Button();
             this.grpCommandLine = new System.Windows.Forms.GroupBox();
+            this.cmbCommandLine = new KCommander.UserClasses.MyCommandLineCombo();
             this.btnClearCurrentHistory = new System.Windows.Forms.Button();
             this.btnExecTab1 = new System.Windows.Forms.Button();
             this.btnClearCommandHistory = new System.Windows.Forms.Button();
@@ -52,14 +54,6 @@ namespace KCommander
             this.pnlSide1 = new System.Windows.Forms.Panel();
             this.tabCtrlSide1 = new System.Windows.Forms.TabControl();
             this.tabList1 = new System.Windows.Forms.TabPage();
-            this.pnlSide2 = new System.Windows.Forms.Panel();
-            this.tabCtrlSide2 = new System.Windows.Forms.TabControl();
-            this.tabList2 = new System.Windows.Forms.TabPage();
-            this.imageList = new System.Windows.Forms.ImageList(this.components);
-            this.timerTopMost = new System.Windows.Forms.Timer(this.components);
-            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.groupFiler = new System.Windows.Forms.GroupBox();
-            this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.listView1 = new KCommander.UserClasses.MyDirListView();
             this.colHead = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Flag = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -67,6 +61,9 @@ namespace KCommander
             this.Ext = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.FileSize = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Updated = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.pnlSide2 = new System.Windows.Forms.Panel();
+            this.tabCtrlSide2 = new System.Windows.Forms.TabControl();
+            this.tabList2 = new System.Windows.Forms.TabPage();
             this.listView2 = new KCommander.UserClasses.MyDirListView();
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -74,8 +71,11 @@ namespace KCommander
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Updated2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.cmbDir = new KCommander.UserClasses.MyDirCombo();
-            this.cmbCommandLine = new KCommander.UserClasses.MyCommandLineCombo();
+            this.imageList = new System.Windows.Forms.ImageList(this.components);
+            this.timerTopMost = new System.Windows.Forms.Timer(this.components);
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.groupFiler = new System.Windows.Forms.GroupBox();
+            this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.pnlTop.SuspendLayout();
             this.grpDir.SuspendLayout();
             this.grpCommandLine.SuspendLayout();
@@ -155,6 +155,19 @@ namespace KCommander
             this.btnSetCmbDir.UseVisualStyleBackColor = true;
             this.btnSetCmbDir.Click += new System.EventHandler(this.btnSetCmbDir_Click);
             // 
+            // cmbDir
+            // 
+            this.cmbDir.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmbDir.FormattingEnabled = true;
+            this.cmbDir.IsCompleteOnlyDirectory = true;
+            this.cmbDir.Location = new System.Drawing.Point(91, 20);
+            this.cmbDir.Name = "cmbDir";
+            this.cmbDir.Size = new System.Drawing.Size(900, 20);
+            this.cmbDir.TabIndex = 1;
+            this.cmbDir.TabStop = false;
+            this.cmbDir.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cmbDir_KeyDown);
+            // 
             // btnShowIntoTab2
             // 
             this.btnShowIntoTab2.Location = new System.Drawing.Point(136, 46);
@@ -168,7 +181,7 @@ namespace KCommander
             // 
             // btnShowIntotab
             // 
-            this.btnShowIntotab.Location = new System.Drawing.Point(12, 47);
+            this.btnShowIntotab.Location = new System.Drawing.Point(12, 46);
             this.btnShowIntotab.Name = "btnShowIntotab";
             this.btnShowIntotab.Size = new System.Drawing.Size(118, 23);
             this.btnShowIntotab.TabIndex = 2;
@@ -192,6 +205,18 @@ namespace KCommander
             this.grpCommandLine.TabStop = false;
             this.grpCommandLine.Text = "コマンドライン(&C)";
             this.grpCommandLine.Enter += new System.EventHandler(this.grpCommandLine_Enter);
+            // 
+            // cmbCommandLine
+            // 
+            this.cmbCommandLine.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmbCommandLine.FormattingEnabled = true;
+            this.cmbCommandLine.IsCompleteOnlyDirectory = false;
+            this.cmbCommandLine.Location = new System.Drawing.Point(12, 17);
+            this.cmbCommandLine.Name = "cmbCommandLine";
+            this.cmbCommandLine.Size = new System.Drawing.Size(979, 20);
+            this.cmbCommandLine.TabIndex = 0;
+            this.cmbCommandLine.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cmbCommandLine_KeyDown);
             // 
             // btnClearCurrentHistory
             // 
@@ -330,6 +355,58 @@ namespace KCommander
             this.tabList1.Text = "タブ1";
             this.tabList1.UseVisualStyleBackColor = true;
             // 
+            // listView1
+            // 
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.colHead,
+            this.Flag,
+            this.FileName,
+            this.Ext,
+            this.FileSize,
+            this.Updated});
+            this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listView1.FullRowSelect = true;
+            this.listView1.HideSelection = false;
+            this.listView1.Location = new System.Drawing.Point(3, 3);
+            this.listView1.MultiSelect = false;
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(456, 278);
+            this.listView1.TabIndex = 0;
+            this.listView1.TargetDir = null;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Details;
+            this.listView1.ColumnClick += new System.Windows.Forms.ColumnClickEventHandler(this.listView1_ColumnClick);
+            // 
+            // colHead
+            // 
+            this.colHead.Text = "FN";
+            this.colHead.Width = 0;
+            // 
+            // Flag
+            // 
+            this.Flag.Text = "選択";
+            this.Flag.Width = 32;
+            // 
+            // FileName
+            // 
+            this.FileName.Text = "ファイル名";
+            this.FileName.Width = 160;
+            // 
+            // Ext
+            // 
+            this.Ext.Text = "拡張子";
+            this.Ext.Width = 50;
+            // 
+            // FileSize
+            // 
+            this.FileSize.Text = "サイズ";
+            this.FileSize.Width = 50;
+            // 
+            // Updated
+            // 
+            this.Updated.Text = "更新日時";
+            this.Updated.Width = 200;
+            // 
             // pnlSide2
             // 
             this.pnlSide2.Controls.Add(this.tabCtrlSide2);
@@ -360,6 +437,57 @@ namespace KCommander
             this.tabList2.TabIndex = 0;
             this.tabList2.Text = "タブ2";
             this.tabList2.UseVisualStyleBackColor = true;
+            // 
+            // listView2
+            // 
+            this.listView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader5,
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3,
+            this.columnHeader4,
+            this.Updated2});
+            this.listView2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listView2.FullRowSelect = true;
+            this.listView2.HideSelection = false;
+            this.listView2.Location = new System.Drawing.Point(3, 3);
+            this.listView2.MultiSelect = false;
+            this.listView2.Name = "listView2";
+            this.listView2.Size = new System.Drawing.Size(509, 278);
+            this.listView2.TabIndex = 0;
+            this.listView2.TargetDir = null;
+            this.listView2.UseCompatibleStateImageBehavior = false;
+            this.listView2.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "Head";
+            this.columnHeader5.Width = 0;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "選択";
+            this.columnHeader1.Width = 32;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "ファイル名";
+            this.columnHeader2.Width = 160;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "拡張子";
+            this.columnHeader3.Width = 50;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "サイズ";
+            this.columnHeader4.Width = 50;
+            // 
+            // Updated2
+            // 
+            this.Updated2.Text = "更新日時";
+            this.Updated2.Width = 200;
             // 
             // imageList
             // 
@@ -423,134 +551,6 @@ namespace KCommander
             this.splitContainer2.Size = new System.Drawing.Size(997, 310);
             this.splitContainer2.SplitterDistance = 470;
             this.splitContainer2.TabIndex = 2;
-            // 
-            // listView1
-            // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.colHead,
-            this.Flag,
-            this.FileName,
-            this.Ext,
-            this.FileSize,
-            this.Updated});
-            this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listView1.FullRowSelect = true;
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(3, 3);
-            this.listView1.MultiSelect = false;
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(456, 278);
-            this.listView1.TabIndex = 0;
-            this.listView1.TargetDir = null;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
-            this.listView1.ColumnClick += new System.Windows.Forms.ColumnClickEventHandler(this.listView1_ColumnClick);
-            // 
-            // colHead
-            // 
-            this.colHead.Text = "FN";
-            this.colHead.Width = 0;
-            // 
-            // Flag
-            // 
-            this.Flag.Text = "選択";
-            this.Flag.Width = 32;
-            // 
-            // FileName
-            // 
-            this.FileName.Text = "ファイル名";
-            this.FileName.Width = 160;
-            // 
-            // Ext
-            // 
-            this.Ext.Text = "拡張子";
-            this.Ext.Width = 50;
-            // 
-            // FileSize
-            // 
-            this.FileSize.Text = "サイズ";
-            this.FileSize.Width = 50;
-            // 
-            // Updated
-            // 
-            this.Updated.Text = "更新日時";
-            this.Updated.Width = 200;
-            // 
-            // listView2
-            // 
-            this.listView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader5,
-            this.columnHeader1,
-            this.columnHeader2,
-            this.columnHeader3,
-            this.columnHeader4,
-            this.Updated2});
-            this.listView2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listView2.FullRowSelect = true;
-            this.listView2.HideSelection = false;
-            this.listView2.Location = new System.Drawing.Point(3, 3);
-            this.listView2.MultiSelect = false;
-            this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(509, 278);
-            this.listView2.TabIndex = 0;
-            this.listView2.TargetDir = null;
-            this.listView2.UseCompatibleStateImageBehavior = false;
-            this.listView2.View = System.Windows.Forms.View.Details;
-            // 
-            // columnHeader5
-            // 
-            this.columnHeader5.Text = "Head";
-            this.columnHeader5.Width = 0;
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "選択";
-            this.columnHeader1.Width = 32;
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "ファイル名";
-            this.columnHeader2.Width = 160;
-            // 
-            // columnHeader3
-            // 
-            this.columnHeader3.Text = "拡張子";
-            this.columnHeader3.Width = 50;
-            // 
-            // columnHeader4
-            // 
-            this.columnHeader4.Text = "サイズ";
-            this.columnHeader4.Width = 50;
-            // 
-            // Updated2
-            // 
-            this.Updated2.Text = "更新日時";
-            this.Updated2.Width = 200;
-            // 
-            // cmbDir
-            // 
-            this.cmbDir.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.cmbDir.FormattingEnabled = true;
-            this.cmbDir.IsCompleteOnlyDirectory = true;
-            this.cmbDir.Location = new System.Drawing.Point(91, 20);
-            this.cmbDir.Name = "cmbDir";
-            this.cmbDir.Size = new System.Drawing.Size(900, 20);
-            this.cmbDir.TabIndex = 1;
-            this.cmbDir.TabStop = false;
-            this.cmbDir.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cmbDir_KeyDown);
-            // 
-            // cmbCommandLine
-            // 
-            this.cmbCommandLine.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.cmbCommandLine.FormattingEnabled = true;
-            this.cmbCommandLine.IsCompleteOnlyDirectory = false;
-            this.cmbCommandLine.Location = new System.Drawing.Point(12, 17);
-            this.cmbCommandLine.Name = "cmbCommandLine";
-            this.cmbCommandLine.Size = new System.Drawing.Size(979, 20);
-            this.cmbCommandLine.TabIndex = 0;
-            this.cmbCommandLine.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cmbCommandLine_KeyDown);
             // 
             // frmKeyCommander
             // 
