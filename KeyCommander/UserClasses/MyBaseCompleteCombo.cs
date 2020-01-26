@@ -157,6 +157,22 @@ namespace KCommander.UserClasses
                 return;
             }
 
+            if (e.Control && e.KeyValue == (int)Keys.E)
+            {
+                this.SelectionStart = this.Text.Length;
+                e.Handled = true;
+                e.SuppressKeyPress = true;
+                return;
+            }
+            //if (e.Control && e.KeyValue == (int)Keys.A)
+            //{
+            //    this.SelectionStart = 0;
+            //    e.Handled = true;
+            //    e.SuppressKeyPress = true;
+            //    return;
+            //}
+
+
             /*
             if (e.Control && e.KeyValue == (int)Keys.Delete)
             {
