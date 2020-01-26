@@ -283,6 +283,8 @@ namespace KCommander.UserClasses
                     int cnt = 0;
                     bool isExistsSpace = false;
                     char[] selWordsCharReverse = selWord.ToCharArray().Reverse<char>().ToArray<char>();
+                    int spaceMaxCnt = this.CountChar(selWord, ' ') + this.CountChar(selWord, '　');
+                    int spaceCnt = 0;
                     foreach (char c in selWordsCharReverse)
                     {
                         if ('"'.Equals(c) /* && ( (cnt < selWordsCharReverse.Length ) && selWordsCharReverse[cnt] != '\\')*/ )
@@ -292,23 +294,42 @@ namespace KCommander.UserClasses
                         }
                         if (' '.Equals(c) || "　".Equals(c.ToString()) )
                         {
-                            isExistsSpace = true;
+                            //isExistsSpace = true;
+                            spaceCnt++;
+                            if (spaceCnt >= spaceMaxCnt - 1)
+                            {
+                                break;
+                            }
                             if (space_inline_mode2)
                             {
                                 continue;
                             }
-                            else
-                            {
-                                break;
-                            }
+                            //else
+                            //{
+                            //    break;
+                            //}
                         }
                         pos_bias++;
                         cnt++;
 
                     }
+                    start = this.SelectionStart;
                     int len_bias = 0;
                     int tmpSelStert = lastSelectionStartTAB - pos_bias;
                     if (tmpSelStert <= 1) tmpSelStert = 0;
+                    if (this.Text.Count() > start && start >= 2 && this.Text.Substring(start - 1, 1) == "\"")
+                    {
+                        start = this.SelectionStart;
+                        len = this.SelectionLength;
+                        this.Text = this.Text.Substring(0, start - 1) + this.Text.Substring(start+1);
+ //                       len_bias--;
+                        tmpSelStert = start - 1;
+                        this.SelectionStart = start - 1;
+                        this.SelectionLength = len - 1;
+#if DEBUG
+                        Console.WriteLine("text=" + this.Text + ", tmpSelStart=" + tmpSelStert.ToString());
+#endif
+                    }
                     //if (lastSelectionIndexTAB < pos_bias)
                     if (isExistsSpace)
                     {
