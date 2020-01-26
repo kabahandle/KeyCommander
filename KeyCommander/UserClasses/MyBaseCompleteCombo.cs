@@ -458,15 +458,16 @@ namespace KCommander.UserClasses
                                 _cursubdirs = Directory.GetDirectories(basedir, searchFile);
 
                                 //"C:\test"以下の".txt"ファイルをすべて取得する
-                                di = new System.IO.DirectoryInfo(basedir);
+                                //di = new System.IO.DirectoryInfo(basedir);
                                 //aryFiles = di.GetFiles(lastSearchedkeyTAB.Replace("\"", "").Replace(basedir, "") + "*", System.IO.SearchOption.TopDirectoryOnly);
                                 //foreach (System.IO.FileInfo f in aryFiles)
                                 //{
                                 //    filepathes.Add(f.FullName);
                                 //}
                                 //_curfiles = filepathes.ToArray<string>();
-                                _curfiles = Directory.GetFiles(basedir, searchFile);
+                                //_curfiles = Directory.GetFiles(basedir, searchFile);
                                 //_cursubfiles = Directory.GetFiles(basedir,lastSearchedkeyTAB.Replace("\"", "") + "*");
+                                _cursubfiles = Directory.GetFiles(basedir, searchFile);
                             }
                             else
                             {
@@ -474,7 +475,7 @@ namespace KCommander.UserClasses
                                 //_cursubfiles = Directory.GetFiles(curListViewDir + lastSearchedkeyTAB.Replace("\"", ""));
                                 _cursubdirs = Directory.GetDirectories(basedir, searchFile);
                                 //_cursubfiles = Directory.GetFiles(basedir + "\\" , lastSearchedkeyTAB.Replace("\"", "") + "*");
-                                di = new System.IO.DirectoryInfo(basedir);
+                                //di = new System.IO.DirectoryInfo(basedir);
                                 //aryFiles = di.GetFiles(lastSearchedkeyTAB.Replace("\"", "").Replace(basedir, "") + "*", System.IO.SearchOption.TopDirectoryOnly);
                                 //aryFiles = di.GetFiles(searchFile, System.IO.SearchOption.TopDirectoryOnly);
                                 //foreach (System.IO.FileInfo f in aryFiles)
@@ -482,7 +483,7 @@ namespace KCommander.UserClasses
                                 //    filepathes.Add(f.FullName);
                                 //}
                                 //_curfiles = filepathes.ToArray<string>();
-                                _curfiles = Directory.GetFiles(basedir, searchFile);
+                                _cursubfiles = Directory.GetFiles(basedir, searchFile);
                             }
 
                             string drv = basedir.Substring(0, 3);
