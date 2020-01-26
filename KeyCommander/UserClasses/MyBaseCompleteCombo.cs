@@ -265,6 +265,7 @@ namespace KCommander.UserClasses
                     //string selWord = (string.IsNullOrEmpty(this.Text)) ? "" : this.Text.Substring(0, pos);
                     string selWord = this.SelectedText;
                     int cnt = 0;
+                    bool isExistsSpace = false;
                     char[] selWordsCharReverse = selWord.ToCharArray().Reverse<char>().ToArray<char>();
                     foreach (char c in selWordsCharReverse)
                     {
@@ -275,6 +276,7 @@ namespace KCommander.UserClasses
                         }
                         if (' '.Equals(c) || "　".Equals(c.ToString()) )
                         {
+                            isExistsSpace = true;
                             if (space_inline_mode2)
                             {
                                 continue;
@@ -291,7 +293,8 @@ namespace KCommander.UserClasses
                     int len_bias = 0;
                     int tmpSelStert = lastSelectionStartTAB - pos_bias;
                     if (tmpSelStert <= 1) tmpSelStert = 0;
-                    if (lastSearchedIndexTAB < pos_bias)
+                    //if (lastSelectionIndexTAB < pos_bias)
+                    if (isExistsSpace)
                     {
                         //tmpSelStert = pos_bias + 1;
                         tmpSelStert = lastSelectionStartTAB - 1;
