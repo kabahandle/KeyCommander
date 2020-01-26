@@ -294,20 +294,20 @@ namespace KCommander.UserClasses
                         }
                         if (' '.Equals(c) || "　".Equals(c.ToString()) )
                         {
-                            //isExistsSpace = true;
-                            spaceCnt++;
-                            if (spaceCnt >= spaceMaxCnt - 1)
-                            {
-                                break;
-                            }
+                            isExistsSpace = true;
+                            //spaceCnt++;
+                            //if (spaceCnt >= spaceMaxCnt - 1)
+                            //{
+                            //    break;
+                            //}
                             if (space_inline_mode2)
                             {
                                 continue;
                             }
-                            //else
-                            //{
-                            //    break;
-                            //}
+                            else
+                            {
+                                break;
+                            }
                         }
                         pos_bias++;
                         cnt++;
