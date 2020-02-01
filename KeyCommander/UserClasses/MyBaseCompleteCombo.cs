@@ -203,10 +203,18 @@ namespace KCommander.UserClasses
 
                 //int pos = this.SelectionStart;
                 int pos_bias = 0;
+                //bool selWordEndsWithSpace = false;
                 if (this.SelectionLength == 0)
                 {
                     bool space_inline_mode = false;
                     string selWord = (string.IsNullOrEmpty(this.Text)) ? "" : this.Text.Substring(0, pos);
+                    //if (this.Text.Count() > pos
+                    //    && (this.Text.Substring(pos + 1, 1).EndsWith(" ") || this.Text.Substring(pos + 1, 1).EndsWith("　")))
+                    //{
+                    //    selWordEndsWithSpace = true;
+
+                    //    //selWord = selWord.Substring(0, selWord.Length - 1);
+                    //}
                     int cnt = 0;
                     char[] selWordsCharReverse = selWord.ToCharArray().Reverse<char>().ToArray<char>();
                     int cntSpaceMax = this.CountChar(selWord, ' ');
@@ -246,7 +254,8 @@ namespace KCommander.UserClasses
                     int tmpSelStert = pos - pos_bias + 1;
                     if (tmpSelStert <= 1) tmpSelStert = 0;
                     this.SelectionStart = tmpSelStert;
-                    this.SelectionLength = pos_bias;
+                    //this.SelectionLength = pos_bias;
+                    this.SelectionLength = pos_bias - 1;
                     lastSearchedkeyTAB = this.HeaderingMarkSprit(this.SelectedText);
                     lastSelectionStartTAB = this.SelectionStart;
 
@@ -333,19 +342,19 @@ namespace KCommander.UserClasses
                     int len_bias = 0;
                     int tmpSelStert = lastSelectionStartTAB - pos_bias;
                     if (tmpSelStert <= 1) tmpSelStert = 0;
-                    if (this.Text.Count() > start && start >= 2 && this.Text.Substring(start - 1, 1) == "\"")
-                    {
-                        start = this.SelectionStart;
-                        len = this.SelectionLength;
-                        this.Text = this.Text.Substring(0, start - 1) + this.Text.Substring(start + 1);
-                        //                       len_bias--;
-                        tmpSelStert = start - 1;
-                        this.SelectionStart = start - 1;
-                        this.SelectionLength = len - 1;
-#if DEBUG
-                        Console.WriteLine("text=" + this.Text + ", tmpSelStart=" + tmpSelStert.ToString());
-#endif
-                    }
+//                    if (this.Text.Count() > start && start >= 2 && this.Text.Substring(start - 1, 1) == "\"")
+//                    {
+//                        start = this.SelectionStart;
+//                        len = this.SelectionLength;
+//                        this.Text = this.Text.Substring(0, start - 1) + this.Text.Substring(start + 1);
+//                        //                       len_bias--;
+//                        tmpSelStert = start - 1;
+//                        this.SelectionStart = start - 1;
+//                        this.SelectionLength = len;
+//#if DEBUG
+//                        Console.WriteLine("text=" + this.Text + ", tmpSelStart=" + tmpSelStert.ToString());
+//#endif
+//                    }
                     //if (lastSelectionIndexTAB < pos_bias)
                     if (isExistsSpace)
                     {
@@ -392,6 +401,10 @@ namespace KCommander.UserClasses
                         this.SelectionStart = start;
                         this.SelectionLength = len;
 
+#if DEBUG
+                        Console.WriteLine("space: selectedText="+this.SelectedText);
+#endif
+
                         this.SelectedText = "\"" + this.SelectedText;
                         //start = start - 1;
                         len = len + 1;
@@ -399,11 +412,22 @@ namespace KCommander.UserClasses
                         this.SelectedText = this.SelectedText + "\"";
                         len = len + 1;
 
+                        //this.SelectedText = this.SelectedText + " ";
+                        //len = len /*+ 1*/;
+
                         this.SelectionStart = start;
                         this.SelectionLength = len;
                         lastSearchedkeyTAB = this.HeaderingMarkSprit(this.SelectedText/*.Replace("\"","")*/);
                         lastSelectionStartTAB = start;
                     }
+                    //if (selWordEndsWithSpace)
+                    //{
+                    //    start = this.SelectionStart;
+                    //    len = this.SelectionLength;
+                    //    this.SelectedText = this.SelectedText + " ";
+                    //    this.SelectionStart = start;
+                    //    this.SelectionLength = len + 1;
+                    //}
                     e.Handled = true;
                     e.SuppressKeyPress = true;
                     return;
@@ -832,8 +856,13 @@ case Keys.D9:*/
                         this.SelectionLength = 0;
                         break;*/
                     default:
-                        this.SelectionStart = this.SelectionStart + this.SelectionLength + 1;
+#if DEBUG
+                        Console.WriteLine("normal key input selection="+this.SelectedText);
+#endif
+                        //this.SelectionStart = this.SelectionStart + this.SelectionLength + 1;
+                        this.SelectionStart = this.SelectionStart + this.SelectionLength;
                         this.SelectionLength = 0;
+                        //this.SelectionLength++;
                         break;
                 }
                 if (e.KeyCode == Keys.Delete)   // Keys.Backと同等
