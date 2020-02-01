@@ -606,6 +606,7 @@ namespace KCommander.UserClasses
                                     if (basedir.EndsWith("\\"))
                                     {
                                         curSubFiles.Add(basedir2 + Path.GetFileName(f));
+                                        //curSubFiles.Add(basedir2 + Path.GetFileName(f));
                                     }
                                     else
                                     {
@@ -625,14 +626,22 @@ namespace KCommander.UserClasses
                         {
                             targets.AddRange(curSubFiles);
                         }
+                        //if (_cursubdirs != null)
+                        //{
+                        //    targets.AddRange(_cursubdirs);
+                        //}
+                        //if (_cursubfiles != null)
+                        //{
+                        //    targets.AddRange(_cursubfiles);
+                        //}
 
                     }
 
-                    //if (curDirs != null && curFiles != null)
-                    //{
-                    //    targets.AddRange(curDirs);
-                    //    targets.AddRange(curFiles);
-                    //}
+                    if (curDirs != null && curFiles != null)
+                    {
+                        targets.AddRange(curDirs);
+                        targets.AddRange(curFiles);
+                    }
                 }
 
                 string dir = string.Empty;
