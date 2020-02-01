@@ -595,7 +595,7 @@ namespace KCommander
         #endregion
 
         private System.Windows.Forms.Panel pnlTop;
-        private System.Windows.Forms.Panel pnlBottom;
+        public System.Windows.Forms.Panel pnlBottom;
         private System.Windows.Forms.Panel pnlSide1;
         private System.Windows.Forms.Panel pnlSide2;
         private System.Windows.Forms.TabControl tabCtrlSide1;

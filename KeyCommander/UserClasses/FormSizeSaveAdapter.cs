@@ -33,6 +33,9 @@ namespace KCommander.UserClasses
                 w.WriteLine(this.form.IsHelpViewHided().ToString());
                 w.WriteLine(this.form.splitContainer1.SplitterDistance.ToString());
                 w.WriteLine(this.form.splitContainer2.SplitterDistance.ToString());
+                w.WriteLine(this.form.splitContainer1.Size.Height.ToString());
+                w.WriteLine(this.form.splitContainer2.Size.Width.ToString());
+                //w.WriteLine(this.form.pnlBottom.Height.ToString());
                 w.Flush();
                 fs.Close();
             }
@@ -102,7 +105,7 @@ namespace KCommander.UserClasses
             }
 
             i = 0;
-            int[] splitterDistance = new int[2] { 0, 0 };
+            int[] splitterDistance = new int[4] { 0, 0, 0, 0 };
 
             while ((line = r.ReadLine()) != null)
             {
@@ -118,7 +121,7 @@ namespace KCommander.UserClasses
 
 
                 i++;
-                if (i >= 2) break;
+                if (i >= 4) break;
             }
             if (splitterDistance[0] > 0)
             {
@@ -128,7 +131,24 @@ namespace KCommander.UserClasses
             {
                 this.form.splitContainer2.SplitterDistance = splitterDistance[1];
             }
+            if (splitterDistance[2] > 0)
+            {
+                this.form.splitContainer1.Height = splitterDistance[2];
+            }
+            if (splitterDistance[3] > 0)
+            {
+                this.form.splitContainer2.Width= splitterDistance[3];
+            }
 
+            //while ((line = r.ReadLine()) != null)
+            //{
+            //    line = line.Trim();
+            //    int tmp2 = 0;
+            //    if (int.TryParse(line, out tmp2) == true)
+            //    {
+            //        this.form.pnlBottom.Height = tmp2;
+            //    }
+            //}
             fs.Close();
         }
 
