@@ -597,8 +597,9 @@ namespace KCommander.UserClasses
                                 foreach (string d in _cursubdirs)
                                 {
                                     curSubDirs.Add(Path.GetDirectoryName(d));
-                                    //curSubDirs.Add(d.Replace(drv, ""));
+                                    curSubDirs.Add(d.Replace(drv, ""));
                                     curSubDirs.Add(d.Replace(curListViewDir + "\\", ""));
+                                    curSubDirs.Add(d);
                                     //curSubDirs.Add(lastSearchedkeyTAB.Replace("\"", "") + Path.GetFileName(d));
                                 }
                             }
