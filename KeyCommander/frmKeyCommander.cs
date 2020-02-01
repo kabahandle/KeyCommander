@@ -654,7 +654,12 @@ namespace KCommander
             {
                 return list.CurDir;
             }
-            return string.Empty;
+            else
+            {
+                LastFocusedListView.lastFocusedListView = this.listView1;
+                return this.listView1.CurDir;
+            }
+            //return string.Empty;
         }
 
 
