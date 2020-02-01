@@ -76,6 +76,9 @@ namespace KCommander.UserClasses
                 }
             }
 
+            //this.SelectionStart = (( this.Text.Count() ) >= 0 ) ? ( this.Text.Count() ) : 0;
+            //this.SelectionLength = 0;
+
             base.OnKeyPress(e);
         }
 
@@ -206,6 +209,8 @@ namespace KCommander.UserClasses
                     string selWord = (string.IsNullOrEmpty(this.Text)) ? "" : this.Text.Substring(0, pos);
                     int cnt = 0;
                     char[] selWordsCharReverse = selWord.ToCharArray().Reverse<char>().ToArray<char>();
+                    int cntSpaceMax = this.CountChar(selWord, ' ');
+                    int cntSpace = 0;
                     foreach (char c in selWordsCharReverse)
                     {
                         pos_bias++;
@@ -219,9 +224,17 @@ namespace KCommander.UserClasses
                         }
                         if (' '.Equals(c))
                         {
+                            cntSpace++;
+
+                            //if (cntSpace < cntSpaceMax)
+                            //{
+                            //    continue;
+                            //}
+                            //else 
                             if (space_inline_mode)
                             {
-                                continue;
+                                break; 
+                                //continue;
                             }
                             else
                             {
@@ -267,6 +280,7 @@ namespace KCommander.UserClasses
                             Console.WriteLine("  selstart=" + this.SelectionStart.ToString());
                             Console.WriteLine("  sellen=" + this.SelectionLength.ToString());
                             Console.WriteLine("  pos=" + pos.ToString());
+                            Console.WriteLine("  pos_bias=" + pos_bias.ToString());
                             Console.WriteLine("  lastTAB=" + lastSelectionStartTAB.ToString());
 #endif
 
@@ -285,6 +299,8 @@ namespace KCommander.UserClasses
                     char[] selWordsCharReverse = selWord.ToCharArray().Reverse<char>().ToArray<char>();
                     int spaceMaxCnt = this.CountChar(selWord, ' ') + this.CountChar(selWord, '　');
                     int spaceCnt = 0;
+                    pos_bias = 0;
+                    cnt = 0;
                     foreach (char c in selWordsCharReverse)
                     {
                         if ('"'.Equals(c) /* && ( (cnt < selWordsCharReverse.Length ) && selWordsCharReverse[cnt] != '\\')*/ )
@@ -292,7 +308,7 @@ namespace KCommander.UserClasses
                             space_inline_mode2 = !space_inline_mode2;
                             continue;
                         }
-                        if (' '.Equals(c) || "　".Equals(c.ToString()) )
+                        if (' '.Equals(c) || "　".Equals(c.ToString()))
                         {
                             isExistsSpace = true;
                             //spaceCnt++;
@@ -321,8 +337,8 @@ namespace KCommander.UserClasses
                     {
                         start = this.SelectionStart;
                         len = this.SelectionLength;
-                        this.Text = this.Text.Substring(0, start - 1) + this.Text.Substring(start+1);
- //                       len_bias--;
+                        this.Text = this.Text.Substring(0, start - 1) + this.Text.Substring(start + 1);
+                        //                       len_bias--;
                         tmpSelStert = start - 1;
                         this.SelectionStart = start - 1;
                         this.SelectionLength = len - 1;
@@ -341,7 +357,8 @@ namespace KCommander.UserClasses
                         len_bias = 1;
                     }
                     this.SelectionStart = tmpSelStert;
-                    this.SelectionLength += pos_bias + len_bias;
+                    this.SelectionLength += /*pos_bias +*/ len_bias;
+                    //this.SelectionLength = pos_bias + len_bias;
                     int lentmp2 = this.SelectionLength;
                     //this.SelectionStart = lastSelectionStartTAB;
                     //this.SelectionLength = pos - lastSelectionStartTAB;
@@ -356,6 +373,7 @@ namespace KCommander.UserClasses
                     Console.WriteLine("  selstart=" + this.SelectionStart.ToString());
                     Console.WriteLine("  sellen=" + this.SelectionLength.ToString());
                     Console.WriteLine("  pos=" + pos.ToString());
+                    Console.WriteLine("  pos_bias=" + pos_bias.ToString());
                     Console.WriteLine("  lastTAB=" + lastSelectionStartTAB.ToString());
 #endif
 
