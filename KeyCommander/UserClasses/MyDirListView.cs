@@ -1334,6 +1334,12 @@ namespace KCommander.UserClasses
             {
                 w.WriteLine(this.strgDetail);
             }
+            foreach (var col in this.Columns)
+            {
+                ColumnHeader h = col as ColumnHeader;
+                if (h == null) continue;
+                w.WriteLine(h.Width);
+            }
             w.Flush();
             fs.Close();
 
@@ -1350,7 +1356,8 @@ namespace KCommander.UserClasses
             StreamReader r = new StreamReader(fs, Encoding.Default);
 
             string line = "";
-            while ( ( line = r.ReadLine())  != null)
+            line = r.ReadLine();
+            if( line != null )
             {
                 if( this.strgSmallIcon.Equals(line) )
                 {
@@ -1359,6 +1366,27 @@ namespace KCommander.UserClasses
                 else
                 {
                     this.View = System.Windows.Forms.View.Details;
+                }
+            }
+            List<ColumnHeader> headers = new List<ColumnHeader>();
+            foreach (var col in this.Columns)
+            {
+                ColumnHeader h = col as ColumnHeader;
+                if (h == null) continue;
+                headers.Add(h);
+            }
+            int cnt = 0;
+            while ((line = r.ReadLine()) != null)
+            {
+                line = line.Trim();
+                int tmp = 0;
+                if (int.TryParse(line, out tmp) == true)
+                {
+                    if (cnt < headers.Count())
+                    {
+                        headers[cnt].Width = tmp;
+                    }
+                    cnt++;
                 }
             }
 
