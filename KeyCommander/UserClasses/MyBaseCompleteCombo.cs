@@ -257,8 +257,8 @@ namespace KCommander.UserClasses
                             //else 
                             if (space_inline_mode)
                             {
-                                break; 
-                                //continue;
+                                //break; 
+                                continue;
                             }
                             else
                             {
