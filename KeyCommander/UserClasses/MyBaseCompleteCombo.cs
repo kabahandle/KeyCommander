@@ -574,7 +574,10 @@ namespace KCommander.UserClasses
                             {
                                 //_cursubdirs = Directory.GetDirectories(curListViewDir + lastSearchedkeyTAB.Replace("\"", ""));
                                 //_cursubfiles = Directory.GetFiles(curListViewDir + lastSearchedkeyTAB.Replace("\"", ""));
+
                                 _cursubdirs = Directory.GetDirectories(basedir, searchFile);
+                                //_cursubdirs = Directory.GetDirectories(curListViewDir, "*");
+
                                 //_cursubfiles = Directory.GetFiles(basedir + "\\" , lastSearchedkeyTAB.Replace("\"", "") + "*");
                                 //di = new System.IO.DirectoryInfo(basedir);
                                 //aryFiles = di.GetFiles(lastSearchedkeyTAB.Replace("\"", "").Replace(basedir, "") + "*", System.IO.SearchOption.TopDirectoryOnly);
@@ -593,8 +596,9 @@ namespace KCommander.UserClasses
                             {
                                 foreach (string d in _cursubdirs)
                                 {
-                                    //curSubDirs.Add(Path.GetDirectoryName(d));
-                                    curSubDirs.Add(d.Replace(drv,""));
+                                    curSubDirs.Add(Path.GetDirectoryName(d));
+                                    //curSubDirs.Add(d.Replace(drv, ""));
+                                    curSubDirs.Add(d.Replace(curListViewDir + "\\", ""));
                                     //curSubDirs.Add(lastSearchedkeyTAB.Replace("\"", "") + Path.GetFileName(d));
                                 }
                             }
@@ -605,11 +609,13 @@ namespace KCommander.UserClasses
                                     //curSubFiles.Add(lastSearchedkeyTAB.Replace("\"", "") + Path.GetFileName(f));
                                     if (basedir.EndsWith("\\"))
                                     {
+                                        curSubFiles.Add((basedir + Path.GetFileName(f)).Replace(curListViewDir + "\\", ""));
                                         curSubFiles.Add(basedir2 + Path.GetFileName(f));
                                         //curSubFiles.Add(basedir2 + Path.GetFileName(f));
                                     }
                                     else
                                     {
+                                        curSubFiles.Add((basedir2 + "\\" + Path.GetFileName(f)).Replace(curListViewDir + "\\", ""));
                                         curSubFiles.Add(basedir2 + "\\" + Path.GetFileName(f));
                                     }
                                 }
@@ -1127,6 +1133,17 @@ case Keys.D9:*/
                 string fullpath = lastSearchedkeyTAB.Replace("\"","") + @"\" + file;
                 FileSystemType type = FigureOutIsFileOrDirectory(file);
 
+                //string file2 = file;
+                //bool file2_has_yen_at_end = false;
+                //if (file2.EndsWith("\\"))
+                //{
+                //    file2_has_yen_at_end = true;
+                //    file2.Substring(0, file.Length - 1);
+                //}
+
+                string file2 = file;
+                file2 = file2.Replace("\\\\", "\\");
+
                 if (!string.IsNullOrEmpty(file))
                 {
                     index++;
@@ -1134,9 +1151,17 @@ case Keys.D9:*/
                     {
                         continue;
                     }
-                    if (file.ToLower().StartsWith(lastSearchedkeyTAB.Replace("\"","").ToLower()))
+                    if (file2.ToLower().StartsWith(lastSearchedkeyTAB.Replace("\"","").ToLower())
+                        /*|| (file2 + "\\").ToLower().StartsWith(lastSearchedkeyTAB.Replace("\"","").ToLower())*/ )
                     {
-                        string file2 = file;
+                        //if (file2_has_yen_at_end)
+                        //{
+                        //    file2 = file2 + "\\";
+                        //}
+                        //if (lastSearchedkeyTAB.EndsWith("\\"))
+                        //{
+                        //    file2 = file2 + "\\";
+                        //}
                         if (lastSearchedkeyTAB.Contains(" ") || lastSearchedkeyTAB.Contains("　"))
                         {
                             file2 = "\"" + file2 + "\"";
