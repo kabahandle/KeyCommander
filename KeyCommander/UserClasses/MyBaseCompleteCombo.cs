@@ -48,19 +48,19 @@ namespace KCommander.UserClasses
 
             if ((win32api.GetAsyncKeyState(win32api.VK_CONTROL) & 0x8000) == 0x8000)
             {
-                if (e.KeyChar.Equals(' '))
-                {
-                    int index = 0;
-                    searchText(ref index);
-                    if (index == this.Items.Count)
-                    {
-                        lastSearchedIndex = 0;
-                        index = 0;
-                        searchText(ref index);
-                    }
-                    e.Handled = true;
-                    return;
-                }
+                //if (e.KeyChar.Equals(' '))
+                //{
+                //    int index = 0;
+                //    searchText(ref index);
+                //    if (index == this.Items.Count)
+                //    {
+                //        lastSearchedIndex = 0;
+                //        index = 0;
+                //        searchText(ref index);
+                //    }
+                //    e.Handled = true;
+                //    return;
+                //}
             }
             else
             {
@@ -111,6 +111,20 @@ namespace KCommander.UserClasses
                 }
             }
             */
+            //if (e.Control && e.KeyChar.Equals(' '))
+            if (e.Control && e.KeyValue == (int)Keys.R)
+            {
+                int index = 0;
+                searchText(ref index);
+                if (index == this.Items.Count)
+                {
+                    lastSearchedIndex = 0;
+                    index = 0;
+                    searchText(ref index);
+                }
+                e.Handled = true;
+                return;
+            }
             if (e.Control && e.KeyValue == (int)Keys.H)
             {
                 if (this.OnCtrlHPress != null)
@@ -181,7 +195,9 @@ namespace KCommander.UserClasses
             {
                 this.Items.Remove(this.Text);
             }*/
-            if (e.Control && e.KeyValue == (int)Keys.R)
+            //if (e.Control && e.KeyValue == (int)Keys.R)
+            if( e.Control 
+                && ( e.KeyValue.Equals(' ') || e.KeyValue.Equals('　')))
             {
                 int pos = this.SelectionStart;
 
