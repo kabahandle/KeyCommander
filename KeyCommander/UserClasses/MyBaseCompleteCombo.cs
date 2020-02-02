@@ -322,6 +322,7 @@ namespace KCommander.UserClasses
                     int cnt = 0;
                     bool isExistsSpace = false;
                     bool isFirstCompletion = true;
+                    bool isFirstQuote = true;
                     char[] selWordsCharReverse = selWord.ToCharArray().Reverse<char>().ToArray<char>();
                     int spaceMaxCnt = this.CountChar(selWord, ' ') + this.CountChar(selWord, '　');
                     int spaceCnt = 0;
@@ -329,13 +330,21 @@ namespace KCommander.UserClasses
                     cnt = 0;
                     foreach (char c in selWordsCharReverse)
                     {
-                        pos_bias++;
-                        cnt++;
                         if ('"'.Equals(c) /* && ( (cnt < selWordsCharReverse.Length ) && selWordsCharReverse[cnt] != '\\')*/ )
                         {
-                            space_inline_mode2 = !space_inline_mode2;
+                            //space_inline_mode2 = !space_inline_mode2;
+                            if (isFirstQuote)
+                            {
+                                isFirstQuote = false;
+                                space_inline_mode2 = true;
+                            }
+                            else
+                            {
+                                space_inline_mode2 = !space_inline_mode2;
+                            }
                             continue;
                         }
+
                         if (' '.Equals(c) || "　".Equals(c.ToString()))
                         {
                             isExistsSpace = true;
@@ -346,20 +355,24 @@ namespace KCommander.UserClasses
                             //}
                             if (space_inline_mode2)
                             {
-                                continue;
+                                //continue;
+                                goto SKIP001;
                             }
-                            //else if (isFirstCompletion)
-                            //{
-                            //    isFirstCompletion = false;
-                            //    space_inline_mode2 = true;
-                            //    continue;
-                            //}
+                            else if (isFirstCompletion)
+                            {
+                                isFirstCompletion = false;
+                                space_inline_mode2 = true;
+                                //continue;
+                                goto SKIP001;
+                            }
                             else
                             {
                                 break;
                             }
                         }
-
+                    SKIP001:
+                        pos_bias++;
+                        cnt++;
                     }
                     start = this.SelectionStart;
                     int len_bias = 0;
@@ -387,14 +400,27 @@ namespace KCommander.UserClasses
                         //tmpSelStert = pos_bias + 1;
                         if (lastSelectionStartTAB - 1 >= 0)
                         {
-                            tmpSelStert = lastSelectionStartTAB - 1;
+                            //tmpSelStert = lastSelectionStartTAB - 1;
                             //tmpSelStert = lastSelectionStartTAB - 1 - pos_bias;
+                            tmpSelStert = pos - pos_bias;
                         }
                         len_bias = 1;
                     }
+                    if (tmpSelStert <= 0)
+                    {
+                        //tmpSelStert = pos_bias - pos;
+                        if (pos > 0)
+                        {
+                            tmpSelStert = pos - 1;
+                        }
+                        else
+                        {
+                            tmpSelStert = pos;
+                        }
+                    }
                     this.SelectionStart = tmpSelStert;
-                    this.SelectionLength += /*pos_bias +*/ len_bias;
-                    //this.SelectionLength += pos_bias + len_bias;
+                    //this.SelectionLength += /*pos_bias +*/ len_bias;
+                    this.SelectionLength += pos_bias + len_bias;
                     int lentmp2 = this.SelectionLength;
                     //this.SelectionStart = lastSelectionStartTAB;
                     //this.SelectionLength = pos - lastSelectionStartTAB;
