@@ -86,13 +86,23 @@ namespace KCommander.UserClasses
 
         public string Filter(string macro)
         {
+            //if (this.CurFile.Contains(" ") || this.CurFile.Contains("　"))
+            //{
+            //    this.CurFile = "\"" + this.CurFile + "\"";
+            //}
+
             StringBuilder sbFiles = new StringBuilder();
             sbFiles.Append(" ");
             if (this.Files != null)
             {
                 foreach (string fn in this.Files)
                 {
-                    sbFiles.Append(fn);
+                    string fn2 = fn;
+                    if (fn2.Contains(" ") || fn2.Contains("　"))
+                    {
+                        fn2 = "\"" + fn2 + "\"";
+                    }
+                    sbFiles.Append(fn2);
                     sbFiles.Append(" ");
                 }
             }
@@ -126,12 +136,41 @@ namespace KCommander.UserClasses
             }
 
             macro = macro.Replace(@"$A", files);
-            macro = macro.Replace(@"$P", this.CurDir);
-            macro = macro.Replace(@"$T", this.TargetDir);
+
+            if (this.CurDir.Contains(" ") || this.CurDir.Contains("　"))
+            {
+                macro = macro.Replace(@"$P", "\"" + this.CurDir + "\"");
+            }
+            else
+            {
+                macro = macro.Replace(@"$P", this.CurDir);
+            }
+            if (this.TargetDir.Contains(" ") || this.TargetDir.Contains("　"))
+            {
+                macro = macro.Replace(@"$T", "\"" + this.TargetDir + "\"");
+            }
+            else
+            {
+                macro = macro.Replace(@"$T", this.TargetDir);
+            }
             macro = macro.Replace(@"$D", this.CurDrv);
             macro = macro.Replace(@"$d", this.TargetDrv);
-            macro = macro.Replace(@"$C", this.CurFile);
-            macro = macro.Replace(@"$X", this.CurFileNoExt);
+            if (this.CurFile.Contains(" ") || this.CurFile.Contains("　"))
+            {
+                macro = macro.Replace(@"$C", "\"" + this.CurFile + "\"");
+            }
+            else
+            {
+                macro = macro.Replace(@"$C", this.CurFile);
+            }
+            if (this.CurFileNoExt.Contains(" ") || this.CurFileNoExt.Contains("　"))
+            {
+                macro = macro.Replace(@"$X", "\"" + this.CurFileNoExt + "\"");
+            }
+            else
+            {
+                macro = macro.Replace(@"$X", this.CurFileNoExt);
+            }
             macro = macro.Replace(@"$Q", "\"");
             macro = macro.Replace(@"$Z", ",");
 
@@ -187,6 +226,10 @@ namespace KCommander.UserClasses
 
                 tmpPath = tmpPath.Replace(@"\", "/");
                 tmpPath = tmpPath.Replace(m.ToString(), "/cygdrive/" + m.ToString().Replace(":", "").ToLower());
+                if (tmpPath.Contains(" ") || tmpPath.Contains("　"))
+                {
+                    tmpPath = "\"" + tmpPath + "\"";
+                }
 
                 macro = macro.Replace(replaceMark, tmpPath);
             }
