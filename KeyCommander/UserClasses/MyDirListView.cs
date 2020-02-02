@@ -937,8 +937,15 @@ namespace KCommander.UserClasses
             return this.CurDir.Substring(0, 1) + ":";
         }
 
+        private string ConvertSJIStoUTF8(string text)
+        {
+            byte[] bytesData = System.Text.Encoding.UTF8.GetBytes(text);
+            string ret = '%' + BitConverter.ToString(bytesData).Replace('-', '%');
+            return ret;
+        }
         private int CallBatch(string flag, string macro, string param)
         {
+            //macro = this.ConvertSJIStoUTF8(macro);
             var startInfo = new ProcessStartInfo();
             startInfo.FileName = System.Environment.GetEnvironmentVariable("ComSpec");
             startInfo.UseShellExecute = false;
