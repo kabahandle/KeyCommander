@@ -1200,9 +1200,12 @@ case Keys.D9:*/
                         //{
                         //    file2 = file2 + "\\";
                         //}
-                        if (lastSearchedkeyTAB.Contains(" ") || lastSearchedkeyTAB.Contains("　"))
+
+                        //if (lastSearchedkeyTAB.Contains(" ") || lastSearchedkeyTAB.Contains("　"))
+                        if (file2.Contains(" ") || file2.Contains("　"))
                         {
                             file2 = "\"" + file2 + "\"";
+                            lastSearchedkeyTAB = "\"" + lastSearchedkeyTAB + "\"";
                         }
                         onCompleting = true;
                         if (this.SelectedText.Length != 0)
@@ -1217,6 +1220,40 @@ case Keys.D9:*/
                             this.Text = this.currentHeaderFlag + file2;
                             this.SelectionStart = this.Text.Length;
                         }
+//                        if (this.SelectedText.Contains(" ") || this.SelectedText.Contains("　"))
+//                        {
+//                            int start = 0;
+//                            int len = 0;
+//                            int quotes_num = this.CountChar(this.SelectedText, '"');
+
+//                            this.SelectionStart = start;
+//                            this.SelectionLength = len;
+
+//                            this.SelectedText = this.SelectedText.Replace("\"", "");
+//                            len = len - quotes_num;
+
+//                            this.SelectionStart = start;
+//                            this.SelectionLength = len;
+
+//#if DEBUG
+//                            Console.WriteLine("space: selectedText=" + this.SelectedText);
+//#endif
+
+//                            this.SelectedText = "\"" + this.SelectedText;
+//                            //start = start - 1;
+//                            len = len + 1;
+
+//                            this.SelectedText = this.SelectedText + "\"";
+//                            len = len + 1;
+
+//                            //this.SelectedText = this.SelectedText + " ";
+//                            //len = len /*+ 1*/;
+
+//                            this.SelectionStart = start;
+//                            this.SelectionLength = len;
+//                            lastSearchedkeyTAB = this.HeaderingMarkSprit(this.SelectedText/*.Replace("\"","")*/);
+//                            lastSelectionStartTAB = start;
+//                        }
                         lastSearchedIndexTAB = index;
                         onCompleting = false;
                         break;
