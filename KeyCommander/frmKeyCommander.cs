@@ -630,7 +630,7 @@ namespace KCommander
             {
                 this.isShowHelpPanel_.Checked = !this.isShowHelpPanel_.Checked;
 
-                if (this.isShowHelpPanel_.Checked == false)
+                if (this.isShowHelpPanel_.Checked == true)
                 {
                     this.ShowHelpView();
                 }
@@ -1073,7 +1073,7 @@ namespace KCommander
         private void OnBPressHandler()
         {
             // guard
-            if (this.isShowHelpPanel_.Checked == true)
+            if (this.isShowHelpPanel_.Checked == false)
             {
                 return;
             }
