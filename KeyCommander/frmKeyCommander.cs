@@ -37,6 +37,8 @@ namespace KCommander
 
         private FormSizeSaveAdapter formSizeAdapter = null;
 
+        private MenuItem isAltCtl_ = null;
+        private MenuItem isShowHelpPanel_ = null;
 
         public frmKeyCommander()
         {
@@ -610,7 +612,37 @@ namespace KCommander
             };
             this.Menu.MenuItems[1].MenuItems.Add(mDosemuAlias);
 
+            // 表示メニュー
+            this.Menu.MenuItems.Add("表示(&H)");
 
+            /*MenuItem*/
+            this.isAltCtl_ = new MenuItem("ALT+CTRLで前面表示(&Z)");
+            this.isAltCtl_.Click += (o2, e2) =>
+            {
+                this.isAltCtl_.Checked = !this.isAltCtl_.Checked;
+            };
+            this.Menu.MenuItems[2].MenuItems.Add(this.isAltCtl_);
+            this.Menu.MenuItems[2].MenuItems.Add("-");
+
+            /*MenuItem*/
+            this.isShowHelpPanel_ = new MenuItem("ヘルプ(&H)");
+            this.isShowHelpPanel_.Click += (o2, e2) =>
+            {
+                this.isShowHelpPanel_.Checked = !this.isShowHelpPanel_.Checked;
+
+                if (this.isShowHelpPanel_.Checked == false)
+                {
+                    this.ShowHelpView();
+                }
+                else
+                {
+                    this.HideHelpView();
+                }
+            };
+            this.Menu.MenuItems[2].MenuItems.Add(this.isShowHelpPanel_);
+
+
+            
             this.LoadDirs();
             ListMacro lm = ListMacro.GetInstance();
             lm.Load();
@@ -755,6 +787,12 @@ namespace KCommander
 
         private void timerTopMost_Tick(object sender, EventArgs e)
         {
+            // guard
+            if (this.isAltCtl_.Checked != true)
+            {
+                return;
+            }
+
             //short shiftcode = win32api.GetAsyncKeyState(win32api.VK_SHIFT);
             short altcode = win32api.GetAsyncKeyState(win32api.VK_ALT);
             short keyctrl = win32api.GetAsyncKeyState(win32api.VK_CONTROL);
@@ -1034,6 +1072,12 @@ namespace KCommander
         private int pnlBottomHeightSize = 70;
         private void OnBPressHandler()
         {
+            // guard
+            if (this.isShowHelpPanel_.Checked == true)
+            {
+                return;
+            }
+
             //if (pnlBottom.Height == 0)
             if (this.IsHelpViewHided())
             {
