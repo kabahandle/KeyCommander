@@ -25,6 +25,7 @@ namespace KCommander
 
         private readonly string tabDirFile = "tabfiles.txt";
         private readonly string checkMenuState = "checkmenustate.txt";
+        
         // ver1.00
         //private string registoryKey = @"Software\TKKC\sub0001";
         // ver1.01
