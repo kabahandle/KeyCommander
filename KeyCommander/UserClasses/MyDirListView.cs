@@ -1256,7 +1256,7 @@ namespace KCommander.UserClasses
 #if DEBUG
                 this.CallBatch("M", "notepad \"" + Application.StartupPath + "\\tmp.txt\"", "");
 #else
-                this.CallBatch("M", "notepad \"" + DataFilePath.Path + "\\tmp.txt\"", "\");
+                this.CallBatch("M", "notepad \"" + DataFilePath.Path + "\\tmp.txt\"", "\"");
 #endif
             }
         }
