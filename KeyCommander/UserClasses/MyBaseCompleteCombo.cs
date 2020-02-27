@@ -8,6 +8,8 @@ using System.Text.RegularExpressions;
 
 namespace KCommander.UserClasses
 {
+    // Hey, spaghetti code, fuck!
+
     public class MyBaseCompleteCombo : ComboBox, IMyCombo4Complete
     {
         private int lastSearchedIndex = 0;
