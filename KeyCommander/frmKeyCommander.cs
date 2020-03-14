@@ -596,10 +596,12 @@ namespace KCommander
             this.listView1.OnRPress += delegate()
             {
                 this.listView2.Focus();
+                LastFocusedListView.lastFocusedListView = this.listView2;
             };
             this.listView2.OnRPress += delegate()
             {
                 this.listView1.Focus();
+                LastFocusedListView.lastFocusedListView = this.listView1;
             };
             this.listView1.OnTPress += delegate()
             {
