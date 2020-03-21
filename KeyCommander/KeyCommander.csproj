@@ -320,6 +320,7 @@
     <None Include="App_Data\Cygwin\mintty.cmd">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Include="App_Data\dobat.bat" />
     <None Include="App_Data\dobat.cmd">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
@@ -329,6 +330,7 @@
     <None Include="App_Data\dobatp.cmd">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Include="App_Data\dobatt.bat" />
     <None Include="App_Data\dobatt.cmd">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
