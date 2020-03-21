@@ -1302,11 +1302,23 @@ case Keys.D9:*/
             throw new NotImplementedException();
         }
 
+        private int prevLostFocusSelectionStart = 0;
+        private int prevLostFocusSelectionLength = 0;
+
+        protected override void OnLeave(EventArgs e)
+        {
+            this.prevLostFocusSelectionStart = this.SelectionStart;
+            this.prevLostFocusSelectionLength = this.SelectionLength;
+
+            base.OnLeave(e);
+        }
+
         protected override void OnGotFocus(EventArgs e)
         {
             base.OnGotFocus(e);
 
-            this.SelectionLength = 0;
+            this.SelectionStart = this.prevLostFocusSelectionStart;
+            this.SelectionLength = this.prevLostFocusSelectionLength;
         }
 
         //protected override void OnEnter(EventArgs e)
