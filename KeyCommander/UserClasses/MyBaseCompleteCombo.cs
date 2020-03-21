@@ -1301,5 +1301,17 @@ case Keys.D9:*/
         {
             throw new NotImplementedException();
         }
+
+        protected override void OnGotFocus(EventArgs e)
+        {
+            base.OnGotFocus(e);
+
+            this.SelectionLength = 0;
+        }
+
+        //protected override void OnEnter(EventArgs e)
+        //{
+        //    //base.OnEnter(e);
+        //}
     }
 }
