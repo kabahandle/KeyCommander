@@ -154,7 +154,7 @@ namespace KCommander.UserClasses
                 macro = macro.Replace(@"$T", this.TargetDir);
             }
             macro = macro.Replace(@"$D", this.CurDrv);
-            macro = macro.Replace(@"$d", this.TargetDrv);
+            //macro = macro.Replace(@"$d", this.TargetDrv);
             if (this.CurFile.Contains(" ") || this.CurFile.Contains("　"))
             {
                 macro = macro.Replace(@"$C", "\"" + this.CurFile + "\"");
@@ -178,7 +178,7 @@ namespace KCommander.UserClasses
             StringBuilder sb = new StringBuilder(4096);
             LFN_SFN.GetShortPathName(files, sb, (int)sb.Capacity);
             macro = macro.Replace(@"$a", getMountAppliedDosboxPath(sb.ToString()));
-            sb = new StringBuilder(1028);
+            sb = new StringBuilder(4096);
             LFN_SFN.GetShortPathName(this.CurDir, sb, (int)sb.Capacity);
             macro = macro.Replace(@"$p", getMountAppliedDosboxPath(sb.ToString()));
             sb = new StringBuilder(4096);

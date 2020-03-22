@@ -28,9 +28,9 @@ namespace KCommander.UserClasses
 
         //http://csharphelper.com/blog/2015/01/convert-between-long-and-short-file-names-in-c/
         // Define GetShortPathName API function.
-        [DllImport("kernel32.dll", CharSet = CharSet.Auto, SetLastError = true)]
-        public static extern uint GetShortPathName(string lpszLongPath,
-        char[] lpszShortPath, int cchBuffer);
+        //[DllImport("kernel32.dll", CharSet = CharSet.Auto, SetLastError = true)]
+        //public static extern uint GetShortPathName(string lpszLongPath,
+        //char[] lpszShortPath, int cchBuffer);
 
         //https://www.c-sharpcorner.com/article/convert-long-to-short-file-names-in-C-Sharp/
         [DllImport("kernel32.dll", CharSet = CharSet.Auto)]
