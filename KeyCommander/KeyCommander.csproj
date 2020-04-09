@@ -346,6 +346,7 @@
     <None Include="App_Data\dosbox\exec.cmd">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Include="App_Data\dosbox\pipe.bat" />
     <None Include="App_Data\dosbox\pipe.sh" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
