@@ -2,42 +2,61 @@
 rem *************************************************
 rem  Autoexec.bat for 220again
 rem *************************************************
-REM loadhigh C:\WINDOWS\nlsfunc.exe C:\WINDOWS\country.sys
+REM loadhigh C:\WINDOWS\nlsfunc.exe c:\country.sys
 REM SET PATH=C:\PROGRA~1\NORTON~1;C:\PROGRA~1\BORLAND\CBUILDER\BIN
 REM SET LMOUSE=C:\PROGRA~1\MOUSE
 
-LOADHIGH c:\dos220\DOS\NLSFUNC.EXE c:\dos220\DOS\COUNTRY.SYS
+rem C:\dos220\fontn\fontnx /P=C:\dos220\font\
+rem C:\dos220\dispv\dispvb
+rem C:\dos220\chej\chej jp
+rem C:\dos220\dispv\vmx 70
 
-SET COMSPEC=c:\dos220\COMMAND.COM
+rem ADDDRV C:\ATOK.SYS
+rem ADDDRV C:\ATOKA.SYS /UCF=c:\appli\ATOK8\ATOK8.UCF
 
-rem loadhigh c:\fontn\fontnx /p=d:\220again\font\
-loadhigh c:\dos220\fontn\fontnx /p=c:\dos220\font\
-rem loadhigh d:\220again\DOS\$DISP.SYS /HS=lc
-loadhigh c:\dos220\dispv\dispvb.exe /f1 /hs=all
-LOADHIGH c:\dos220\DOS\NLSFUNC.EXE d:\220again\DOS\COUNTRY.SYS >nul
+rem atok.bat
+
+
+rem LOADHIGH c:\DOS\NLSFUNC.EXE d:\COUNTRY.SYS
+
+rem SET COMSPEC=c:\\COMMAND.COM /p /e:4096
+
+rem COUNTRY=081,932,C:\dos220\DOS\COUNTRY.SYS
+rem loadhigh c:\dos220\fontn\fontnx /p=c:\dos220\font\
+loadhigh c:\dos220\fontn\fontnx /p=c:\dos220\dosemu\
+rem loadhigh c:\dos220\DOS\$DISP.SYS /HS=lc
+rem loadhigh c:\dos220\dispv\dispvb.exe /f1 /hs=all
+loadhigh c:\dos220\dispv\dispvb.exe /f1 /hs=lc
+LOADHIGH c:\dos220\DOS\NLSFUNC.c:\dos220\DOS\COUNTRY.SYS >nul
+C:\dos220\dispv\vmx 70
 c:\dos220\chej\chej jp
 
-adddrv atok.sys
+rem adddrv atok.sys
 
 REM call dosime.bat
 
+rem mngdev fep
+c:\dos220\mngdev c:\dos220\atok
+rem mngdev wxp.sys
+
 @echo off
-rem ------ ëççáä¬ã´
+rem ------ ëççáä¬ã´c
 set ROOT=c:\dos220
 set HOME=c:\dos220
 set ZIP=z:
 set CDROM=d:
 set TMP=c:\dos220\tmp
+set TMP=c:\dos220\tmp
 set WORK=%TMP%
-set TEMP=%TMP%
 SET TZ=JST-9
 set LOGNAME=KaBA
+set PAGER=less
 
 rem ------ PATH
-PATH %PATH%;%ROOT%\usr;%ROOT%\bat;%ROOT%\mml\lsic\bin
+PATH %ROOT%\usr;%ROOT%\bat;%ROOT%\dos;%ROOT%\mml\lsic\bin;D:\bin
 
 rem ------- ï‚èïä¬ã´
-PROMPT [COM]$P$G
+rem PROMPT [COM]$P$G
 set VmtMode=70 80,34
 set YGVIEWR=more
 set pager=less
@@ -54,6 +73,7 @@ rem path d:\cygnus\H-i386-cygwin32\bin;%path%
 
 rem ------ Vz ä¬ã´
 set vzdef=%ROOT%\vz\macro\kabaibm2.def
+rem set vzdef=%ROOT%\vz\macro\kabaibm3.def
 set vzbak=\trash
 set vzdir=%ROOT%\vz
 set vzpath=%ROOT% %ROOT%\home\work %ROOT%\vz\macro %ROOT%\term\ktx\pool %ROOT%\term\ktx\macro\autonif %HOME%\home\pim %ZIP%\log
@@ -76,9 +96,9 @@ set s2fmacro=%ROOT%\bat\awk
 set s2fhostdb=%ROOT%\bat\awk
 
 rem ----- TeX ä¬ã´
-REM set go32=ansi handle 30
+set go32=ansi handle 30
 REM set TEXINPUTS=.;c:/appli/jtex/jmacros;c:/appli/jtex/macros
-REM set go32TMP=f:/
+set go32TMP=c:\dos220\tmp
 REM set TEXPOOL=c:/appli/jtex/bin
 REM set TEXFORMATS=.;c:/appli/jtex/bin
 REM set TEXFONTS=c:/appli/jtex/jfms;c:/appli/jtex/tfm
@@ -103,11 +123,16 @@ REM ctrlcaps
 REM vfat
 
 rem ------ goto HOME
-rem cd %root%
+cd %root%
 
 REM ------ go into getty.bat pseudo login shell
 rem getty.bat
 
 rem %root%\ksh
 
-%1 %2 %3 %4 %5 %6 %7 %8 %9
+rem %root%vz\vwx.com
+
+cd %1
+shift
+
+%1 %2 %3 %4 %5 %6 %7 %8 %9
