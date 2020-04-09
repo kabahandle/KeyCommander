@@ -346,6 +346,7 @@
     <None Include="App_Data\dosbox\exec.cmd">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Include="App_Data\dosbox\pipe.sh" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -372,6 +373,7 @@
     <Content Include="App_Data\dirs.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="App_Data\dosbox\SHDOS16.EXE" />
     <Content Include="App_Data\formsize.txt" />
     <Content Include="App_Data\macro.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
