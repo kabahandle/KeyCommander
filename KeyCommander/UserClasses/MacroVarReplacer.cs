@@ -269,11 +269,12 @@ namespace KCommander.UserClasses
             string ret = windowsPath;
             foreach (KeyValuePair<string,string> kv in MacroVarReplacer.DosBoxDirMounts)
             {
-                StringBuilder sb = new StringBuilder(4096);
-                LFN_SFN.GetShortPathName(kv.Key, sb, (int)sb.Capacity);
-                string sfn_key = sb.ToString();
+                ret = ret.Replace(kv.Key, kv.Value);
+                //StringBuilder sb = new StringBuilder(4096);
+                //LFN_SFN.GetShortPathName(kv.Key, sb, (int)sb.Capacity);
+                //string sfn_key = sb.ToString();
 
-                ret = ret.Replace(sfn_key, kv.Value);
+                //ret = ret.Replace(sfn_key, kv.Value);
             }
 
             return ret;
