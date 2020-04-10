@@ -1,3 +1,4 @@
+CMDLINE=""
 while [ "$1" != "" ]
 do
   if [ "$1" = ":" ] ; then
