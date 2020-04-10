@@ -334,6 +334,7 @@ namespace KCommander.UserClasses
         {
             try
             {
+                string prevTargetFileName = string.Empty;
                 string prevDir = this.CurDir;
                 int prev_line = 0;
                 if (prevDir != null && prevDir.Equals(dirText))
@@ -342,6 +343,11 @@ namespace KCommander.UserClasses
                     {
                         if (item != null && item.Equals(this.FocusedItem))
                         {
+                            MyItem4FileListView m = item as MyItem4FileListView;
+                            if (m != null)
+                            {
+                                prevTargetFileName = m.FileName;
+                            }
                             break;
                         }
                         prev_line++;
@@ -410,9 +416,16 @@ namespace KCommander.UserClasses
                     {
                         curdir += "\\";
                     }
+                    if (prevDir != null
+                        && prevDir.Equals(this.curDir))
+                    {
+                        prevFileName = prevTargetFileName;
+                    }
                     //if (prevrDir != null && prevDir.Equals(this.CurDir))
                     //if (this.CurDir != null && CurDir.Equals(prevDir))
-                    if (prevDir != null && prevDir.Equals(curdir + prevFileName))
+                    if (prevDir != null 
+                        && ( prevDir.Equals(curdir + prevFileName) 
+                            || prevDir.Equals(this.curDir)))
                     {
                         //if (prev_line > Items.Count)
                         //{
