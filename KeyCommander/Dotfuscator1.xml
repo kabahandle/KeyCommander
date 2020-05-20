@@ -2,17 +2,14 @@
 <!DOCTYPE dotfuscator SYSTEM "http://www.preemptive.com/dotfuscator/dtd/dotfuscator_v2.3.dtd">
 <dotfuscator version="2.3">
   <!--これはアプリケーションが生成したコードです。直接編集しないでください。-->
-  <global>
-    <option>quiet</option>
-  </global>
   <input>
     <asmlist>
-      <inputassembly refid="bac87b2b-1d0b-4685-88cb-9a876d7ad1e8">
+      <inputassembly refid="d37bed4f-da6f-43bd-9595-7afec583f940">
         <option>honoroas</option>
         <option>stripoa</option>
         <option>library</option>
         <option>transformxaml</option>
-        <file dir="M:\09 ViualStudio\Visual Studio 2012\Projects\KeyCommander20191108-\KeyCommander\bin\x86\Release" name="KeyCommander.exe" />
+        <file dir="C:\01_kabaDocumernmt\Visual Studio 2012\Projects\KeyCommander-20200413-\KeyCommander\bin\x86\Release" name="KeyCommander.exe" />
       </inputassembly>
     </asmlist>
   </input>
