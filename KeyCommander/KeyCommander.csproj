@@ -348,6 +348,8 @@
     </None>
     <None Include="App_Data\dosbox\pipe.bat" />
     <None Include="App_Data\dosbox\pipe.sh" />
+    <None Include="App_Data\VTDOS\pipe2.cmd" />
+    <None Include="App_Data\VTDOS\pipevt.cmd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -395,6 +397,7 @@
     <Content Include="App_Data\window2.txt" />
     <Content Include="KEYS03.ICO" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>if  $(ConfigurationName)  == Release "C:\Program Files (x86)\Microsoft Visual Studio 11.0\PreEmptive Solutions\Dotfuscator and Analytics Community Edition\dotfuscator.exe" -q "$(ProjectDir)Dotfuscator1.xml"
