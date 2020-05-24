@@ -305,6 +305,7 @@
     <EmbeddedResource Include="UserForms\frmEditDosemuAlias.resx">
       <DependentUpon>frmEditDosemuAlias.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="App_Data\bpipe.sh" />
     <None Include="App_Data\Cygwin\bash.cmd">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
@@ -348,6 +349,8 @@
     </None>
     <None Include="App_Data\dosbox\pipe.bat" />
     <None Include="App_Data\dosbox\pipe.sh" />
+    <None Include="App_Data\VTDOS\bpipe.sh" />
+    <None Include="App_Data\VTDOS\pipe.sh" />
     <None Include="App_Data\VTDOS\pipe2.cmd" />
     <None Include="App_Data\VTDOS\pipevt.cmd" />
     <None Include="Properties\Settings.settings">

@@ -1,0 +1,29 @@
+﻿@echo off
+rem set shinya_chartcge=60*6
+rem set akegata_chatcge_time=60*2
+rem shift
+
+work_shinya_time = 4
+work_time_asagata=2
+work_shinya_time=2
+work_time_asagata=1
+
+tsujyoujikan = tolal_tikan - 
+    work_shinya_time * 2 +
+    work_time_asagata * 2 +
+    work_shinya_time * 2 +
+    work_time_asagata * 1 +
+
+
+:next
+if "%pg%"==":" (set pg="%pg% | "
+) else if "%1"==":[" ( set pg="%pg% < "
+) else if "%1"==":]" ( set pg="%pg% > "
+) else (set pg=%pg% %1
+)
+shift
+if "%1"=="" goto final
+goto next
+
+:final
+cmd /c "%pg%"
